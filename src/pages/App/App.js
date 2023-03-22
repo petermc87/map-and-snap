@@ -1,12 +1,11 @@
 
 import { useState, useEffect } from 'react'
-import AuthPage from '../AuthPage/AuthPage'
+import AuthPage from '../LandingPage/LandingPage'
 import NewOrderPage from '../NewOrderPage/NewOrderPage'
-import OrderHistoryPage from '../OrderHistotyPage/OrderHistoryPage'
+import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
 import { Routes, Route } from 'react-router-dom'
 import NavBar from '../../components/NavBar/NavBar'
-import FruitsPage from '../FruitsPage/FruitsPage';
-
+import styles from './App.module.scss'
 
 function App () {
   const [state, setState] = useState(null)
@@ -32,10 +31,8 @@ function App () {
         ? <>
           <NavBar />
           <Routes>
-            <Route path='/fruits' element={<FruitsPage />} />
             <Route path='/orders/new' element={<NewOrderPage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
-            <Route path='/' element={<NewOrderPage />} />
           </Routes>
         </>
         : <AuthPage setUser={setUser}/>}

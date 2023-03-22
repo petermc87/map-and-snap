@@ -1,0 +1,25 @@
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    // border: solid black;
+    // text-size: 1rem;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+
+}
+
+.rightNavContainer{
+    // border: solid gray;
+    // margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 3rem;
+}
+
+.navLink{
+    font-size: 1.3rem;
+}
