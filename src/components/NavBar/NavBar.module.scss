@@ -2,18 +2,17 @@
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
-    // border: solid black;
-    // text-size: 1rem;
     position: fixed;
     width: 100vw;
-    left: 0;
-    top: 0;
-
+    // border: solid black;
+    color: var(--text-dark);
+    font-weight: 600;
+    background-color: var(--background-white);
+    border-bottom: solid var(--soft-border);
+    border-width: 0.6px;
 }
 
 .rightNavContainer{
-    // border: solid gray;
-    // margin: 0;
     display: flex;
     justify-content: space-between;
     width: 40%;
@@ -22,4 +21,40 @@
 
 .navLink{
     font-size: 1.3rem;
+}
+
+//Setting the max width for the Hamburger menu
+//to appear on the navigation bar
+@media only screen and (max-width: 1000px)  {
+    .hamburgerMenu{
+        margin-right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 2.05rem;
+        align-items: center;
+        font-size: 2rem;
+    }
+    .lineOneHm, .lineTwoHm, .lineThreeHm{
+        // border: solid var(--info-text);
+        border: solid var(--text-dark);
+        width: 1.5rem;
+        border-radius: 4px;
+        border-width: 0.15rem;
+    }
+    .navLink{
+        display: none;
+    }
+    #navLogo{
+        display: block;
+    }
+}
+
+//Setting the min width for the hamburger menu
+//to be on the navigation bar before it no longer
+//is visibile
+@media only screen and (min-width: 1000px)  {
+    .hamburgerMenu{
+        display: none;
+    }
 }
