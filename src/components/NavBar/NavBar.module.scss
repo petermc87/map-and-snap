@@ -9,6 +9,7 @@
     background-color: var(--background-white);
     border-bottom: solid var(--soft-border);
     border-width: 0.6px;
+    z-index: +2;
 }
 
 .rightNavContainer{
@@ -23,7 +24,6 @@
 }
 
 #dropDownLink{
-    // border: solid gray;
     padding: 1rem;
 }
 
@@ -34,7 +34,6 @@
 #servicesNavBar{
     display: flex;
     padding: 0 0.5rem 0 0.5rem;
-    // border: solid black;
     z-index: +1;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -44,24 +43,17 @@
 
 
 .servicesDropDown{
-    // display: none;
     border: solid black;
-    // z-index: +2;
     position: absolute;
     padding: 1rem;
     top: 2.6rem;
-        // width: 15rem;
-    // align-items: center;
-    // justify-content: center;
     text-align: center;
-    // border-width: 2rem;
     padding-right: 1rem;
     background-color: var(--text-dark);
     color: var(--text-bright);
     font-weight: 100;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    // box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1);
     box-shadow: 0 3px 7px rgb(0 0 0 / 35%);
     z-index: +1;
 }
@@ -73,20 +65,6 @@
     background-color: var(--text-dark);
 
 }
-
-// .servicesDropDown{
-//     border: solid black;
-//     position: fixed;
-//     right: 23%;
-//     top: 7%;
-//     width: 15rem;
-//     // align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//     padding: 1rem 3rem 1rem 3rem;
-// }
-
-
 
 
 //Setting the max width for the Hamburger menu

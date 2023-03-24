@@ -1,0 +1,74 @@
+.introContainer{
+    top: 5rem;
+    position: relative;
+    padding: 15rem 2rem 15rem 2rem;
+    background-image: linear-gradient(rgba(200, 171, 133, 0.7), rgba(243, 243, 243, 0.7)), url("https://images.unsplash.com/photo-1506429290503-47de7d2c94ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3776&q=80");
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+.introText{
+    z-index: +2;
+}
+
+.introContainer > img{
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+
+//Setting the max width for smaller intro text
+@media only screen and (max-width: 1000px)  {
+    .introText{
+        max-width: 27rem;
+    }
+    
+    .introText > h1{
+        font-size: 3rem;
+    }
+    
+    .introText > p{
+        font-size: 1.5rem;
+    }
+
+}
+
+//Setting the min width the larger text appears
+@media only screen and (min-width: 1000px)  {
+    .introContainer{
+        // border: solid gray;
+        top: 4rem;
+    
+    }
+    .introText{
+        max-width: 45rem;
+    }
+    
+    .introText > h1{
+        font-size: 5rem;
+    }
+    
+    .introText > p{
+        font-size: 3rem;
+    }
+
+}
+
+.button{
+    background-color: var(--button-color);
+    color: white;
+    border-radius: 4px;
+    padding: 0.8rem 2.5rem 0.8rem 2.5rem;
+    min-width: 2rem;
+    max-width: 3.5rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
