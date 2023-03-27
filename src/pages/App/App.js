@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react'
-import AuthPage from '../LandingPage/LandingPage'
+import LandingPage from '../LandingPage/LandingPage'
 import NewOrderPage from '../NewOrderPage/NewOrderPage'
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
 import { Routes, Route } from 'react-router-dom'
@@ -35,7 +35,7 @@ function App () {
             <Route path='/orders' element={<OrderHistoryPage />} />
           </Routes>
         </>
-        : <AuthPage setUser={setUser}/>}
+        : <LandingPage setUser={setUser}/>}
     </main>
   )
 }
