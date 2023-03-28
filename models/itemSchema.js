@@ -1,6 +1,6 @@
-const item = require('./item');
+const item = require('./item')
 
-const Schema = require('mongoose').Schema;
+const Schema = require('mongoose').Schema
 
 const itemSchema = new Schema({
   name: { type: String, required: true },
@@ -9,6 +9,6 @@ const itemSchema = new Schema({
   price: { type: Number, required: true, default: 0 }
 }, {
   timestamps: true
-});
+})
 
-module.exports = itemSchema;
+module.exports = itemSchema

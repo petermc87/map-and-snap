@@ -1,4 +1,4 @@
-.infoCardContainer{
+.infoCardWrapper{
     position: relative;
     top: 4rem;
     // border: solid black;
@@ -6,4 +6,7 @@
     flex-flow: wrap;
     justify-content: center;
     padding: 15rem 0 15rem 0;
+}
+.servicesWrapper{
+    border: solid black;
 }

@@ -1,0 +1,76 @@
+@use '../../button';
+$servicesHeight: 50rem;
+
+.serviceContainer{
+    border: solid red;
+    display: flex;
+}
+
+//Changing the div sizing and layout based on mobile
+//viewing.
+@media only screen and (max-width: 1000px) {
+    .serviceContainer{
+        flex-direction: column;
+        // padding: 2rem
+    };
+    // .info{
+    //     width: 100%;
+    // }
+    // .image{
+    //     width: 100%;
+    // }
+    .textContainer{
+        margin: 2rem;
+    }    
+}
+
+//Changing the div sizing and layout based on desktop
+//viewing.
+@media only screen and (min-width: 1000px){
+    .serviceContainer{
+        flex-direction: row;
+    };
+    .info{
+        width: 50%;
+        // padding: 2rem;
+    }
+    .image{
+        width: 50%;
+    }
+    .textContainer{
+        padding: 2rem;
+    }    
+    
+}
+
+.image{
+    border: solid gray;
+    height: $servicesHeight;
+}
+
+.info{
+    border: solid purple;
+    height: $servicesHeight;
+    background-color: rgb(129, 143, 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer{
+    border: solid green;
+    color: var(--text-bright);
+}
+
+.textContainer > h1{
+    font-size: 3rem;
+}
+
+.textContainer > p{
+    font-size: 2rem;
+}
+
+.button{
+    @extend %blackButtons;
+    max-width: 5rem;
+}

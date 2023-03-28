@@ -9,7 +9,6 @@ const dataController = {
           msg: err.message
         })
       } else {
-        
         res.locals.data.fruits = foundFruits
         next()
       }

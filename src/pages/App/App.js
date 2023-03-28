@@ -35,7 +35,7 @@ function App () {
             <Route path='/orders' element={<OrderHistoryPage />} />
           </Routes>
         </>
-        : <LandingPage setUser={setUser}/>}
+        : <LandingPage setUser={setUser} />}
     </main>
   )
 }

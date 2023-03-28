@@ -1,3 +1,6 @@
+//Using a partial scss file here for the button
+@use '../../button';
+
 .introContainer{
     top: 5rem;
     position: relative;
@@ -60,13 +63,8 @@
 
 }
 
+//Calling the class for the black button that
+//was made in the _button.scss file.
 .button{
-    background-color: var(--button-color);
-    color: white;
-    border-radius: 4px;
-    padding: 0.8rem 2.5rem 0.8rem 2.5rem;
-    min-width: 2rem;
-    max-width: 3.5rem;
-    margin-top: 3rem;
-    font-size: 1rem;
+    @extend %blackButtons;
 }
