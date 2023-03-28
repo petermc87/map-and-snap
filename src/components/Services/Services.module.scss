@@ -1,8 +1,10 @@
 @use '../../button';
+@use '../../image';
 $servicesHeight: 50rem;
 
+
 .serviceContainer{
-    border: solid red;
+    // border: solid red;
     display: flex;
 }
 
@@ -12,13 +14,7 @@ $servicesHeight: 50rem;
     .serviceContainer{
         flex-direction: column;
         // padding: 2rem
-    };
-    // .info{
-    //     width: 100%;
-    // }
-    // .image{
-    //     width: 100%;
-    // }
+    }
     .textContainer{
         margin: 2rem;
     }    
@@ -44,12 +40,14 @@ $servicesHeight: 50rem;
 }
 
 .image{
-    border: solid gray;
+    // border: solid gray;
     height: $servicesHeight;
+    @extend %backgroundImage;
+    background-image: url('https://i.imgur.com/RKHnJgw.jpg');
 }
 
 .info{
-    border: solid purple;
+    // border: solid purple;
     height: $servicesHeight;
     background-color: rgb(129, 143, 251);
     display: flex;
@@ -58,7 +56,7 @@ $servicesHeight: 50rem;
 }
 
 .textContainer{
-    border: solid green;
+    // border: solid green;
     color: var(--text-bright);
 }
 

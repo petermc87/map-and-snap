@@ -1,16 +1,12 @@
 //Using a partial scss file here for the button
 @use '../../button';
+@use '../../image';
 
 .introContainer{
     top: 5rem;
     position: relative;
     padding: 15rem 2rem 15rem 2rem;
-    background-image: linear-gradient(rgba(200, 171, 133, 0.7), rgba(243, 243, 243, 0.7)), url("https://images.unsplash.com/photo-1506429290503-47de7d2c94ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3776&q=80");
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    @extend %backgroundImage;
 }
 
 .introText{
