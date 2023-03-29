@@ -17,7 +17,11 @@ $servicesHeight: 50rem;
     }
     .textContainer{
         margin: 2rem;
-    }    
+    }
+    #mapTextContainer{
+        margin: 0;
+    }
+
 }
 
 //Changing the div sizing and layout based on desktop
@@ -35,7 +39,7 @@ $servicesHeight: 50rem;
     }
     .textContainer{
         padding: 2rem;
-    }    
+    }
     
 }
 
@@ -71,4 +75,34 @@ $servicesHeight: 50rem;
 .button{
     @extend %blackButtons;
     max-width: 5rem;
+}
+
+#mapInfo{
+    background-color: rgb(255, 222, 162);
+    color: var(--text-dark);
+}
+
+#mapTextContainer{
+    padding: 0;
+}
+
+#mapTextContainer > h1{
+    color: var(--text-dark);
+}
+
+#mapTextContainer > p{
+    color: var(--text-dark);
+    // margin-right: 2rem;
+    // padding: 0 auto;
+}
+
+#mapServiceContainer{
+    // border: solid black;
+    padding: 6rem 2rem 6rem 2rem;
+    background-color: rgb(255, 222, 162);
+    // height: 45rem;
+}
+#mapImage{
+    border-radius: 10px;
+
 }

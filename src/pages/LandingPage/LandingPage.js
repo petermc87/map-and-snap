@@ -45,9 +45,9 @@ export default function AuthPage (props) {
 
         <div className={styles.servicesWrapper}>
           <Service />
+          {/* <Service />
           <Service />
-          <Service />
-          <Service />
+          <Service /> */}
         </div>
         {/* <h1>Login and SignUp</h1>
                 <SignUpForm setUser={props.setUser}/>
