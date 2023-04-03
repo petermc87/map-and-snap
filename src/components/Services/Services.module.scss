@@ -1,10 +1,12 @@
 @use '../../button';
 @use '../../image';
 $servicesHeight: 50rem;
-
+$realEstateColor: rgb(129, 143, 251);
+$mappingColor: rgb(255, 222, 162);
+$roofingColor: rgb(181, 255, 243);
+$imageRadius: 10px;
 
 .serviceContainer{
-    // border: solid red;
     display: flex;
 }
 
@@ -18,9 +20,24 @@ $servicesHeight: 50rem;
     .textContainer{
         margin: 2rem;
     }
+
+    //Map styling responsiveness.
     #mapTextContainer{
         margin: 0;
     }
+
+    //Roof inspection responsiveness.
+    #roofServiceContainer{
+        border: solid gray;
+        flex-direction: column;
+    }
+
+    .serviceWrapper{
+        flex-direction: column;
+    }
+
+
+
 
 }
 
@@ -40,7 +57,22 @@ $servicesHeight: 50rem;
     .textContainer{
         padding: 2rem;
     }
+
+    //Font will get bigger when its a desktop 
+    //screen.
+    #videoTextContainer{
+        h1{
+            font-size: 5rem;
+        }
     
+        p{
+            font-size: 3rem;
+        }
+    }
+
+    #videoTextContainer{
+        padding: 0 5rem 0 5rem;
+    }
 }
 
 .image{
@@ -53,7 +85,7 @@ $servicesHeight: 50rem;
 .info{
     // border: solid purple;
     height: $servicesHeight;
-    background-color: rgb(129, 143, 251);
+    background-color: $realEstateColor;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,8 +109,10 @@ $servicesHeight: 50rem;
     max-width: 5rem;
 }
 
+
+//Mapping services container styling
 #mapInfo{
-    background-color: rgb(255, 222, 162);
+    background-color: $mappingColor;
     color: var(--text-dark);
 }
 
@@ -92,17 +126,58 @@ $servicesHeight: 50rem;
 
 #mapTextContainer > p{
     color: var(--text-dark);
-    // margin-right: 2rem;
-    // padding: 0 auto;
 }
 
 #mapServiceContainer{
-    // border: solid black;
     padding: 6rem 2rem 6rem 2rem;
-    background-color: rgb(255, 222, 162);
-    // height: 45rem;
+    background-color: $mappingColor;
 }
-#mapImage{
-    border-radius: 10px;
 
+#mapImage{
+    border-radius: $imageRadius;
+}
+
+
+//Roofing and construction container styling
+.serviceWrapper{
+    // border: solid green;
+    display: flex;
+    padding: 6rem 2rem 6rem 2rem;;
+}
+
+#roofInfo{
+    background-color: $roofingColor;
+
+}
+
+#roofTextContainer{
+    color: var(--text-dark);
+}
+
+#roofServiceContainer{
+    // border: solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: $roofingColor;
+}
+
+#roofImage{
+    // border: solid red;
+    border-radius: $imageRadius;
+}
+
+
+//Videography container styling.
+#videoTextContainer{
+    // border: solid gray;
+    position: relative;
+    z-index: +2;
+    bottom: 45rem;
+    // padding: 0 5rem 0 5rem;
+}
+
+#videoImage{
+    width: 100%;
+    position: relative;
+    height: 65rem;
 }
