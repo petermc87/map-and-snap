@@ -19,6 +19,7 @@ $imageRadius: 10px;
     }
     .textContainer{
         margin: 2rem;
+        padding-right: 2rem;
     }
 
     //Map styling responsiveness.
@@ -36,6 +37,9 @@ $imageRadius: 10px;
         flex-direction: column;
     }
 
+    #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
+        padding-left: 0;
+     }
 
 
 
@@ -88,12 +92,14 @@ $imageRadius: 10px;
     background-color: $realEstateColor;
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
+    padding-right: 2rem;
 }
 
 .textContainer{
     // border: solid green;
     color: var(--text-bright);
+    padding: 0;
 }
 
 .textContainer > h1{
@@ -152,6 +158,7 @@ $imageRadius: 10px;
 
 #roofTextContainer{
     color: var(--text-dark);
+    // padding-left: 2rem;
 }
 
 #roofServiceContainer{
@@ -164,6 +171,11 @@ $imageRadius: 10px;
 #roofImage{
     // border: solid red;
     border-radius: $imageRadius;
+}
+
+
+#roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
+   padding-left: 2rem;
 }
 
 
