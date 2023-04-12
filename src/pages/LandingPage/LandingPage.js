@@ -6,9 +6,19 @@ import Service from '../../components/Services/Services'
 import IntroSection from '../../components/IntroSection/IntroSection'
 import InfoCard from '../../components/InfoCard/InfoCard'
 import styles from '../LandingPage/LandingPage.module.scss'
+import Faqs from '../../components/FAQs/Faqs'
+import Footer from '../../components/Footer/Footer'
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
 
+
+
 export default function AuthPage (props) {
+
+  const faqOne = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
+  const faqTwo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
+  const faqThree = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
+  const faqFour = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
+
   return (
     <>
       <header>
@@ -42,16 +52,23 @@ export default function AuthPage (props) {
             iconStyle='fa-solid fa-business-time fa-3x'
           />
         </div>
-
         <div className={styles.servicesWrapper}>
           <Service />
-          {/* <Service />
-          <Service />
-          <Service /> */}
         </div>
-        {/* <h1>Login and SignUp</h1>
-                <SignUpForm setUser={props.setUser}/>
-                <LoginForm setUser={props.setUser}/> */}
+        <h1>FAQ's</h1>
+        <Faqs 
+          faq={faqOne}
+        />
+        <Faqs 
+          faq={faqTwo}
+        />
+        <Faqs 
+          faq={faqThree}
+        />
+        <Faqs 
+          faq={faqFour}
+        />
+        <Footer/>
       </main>
     </>
   )
