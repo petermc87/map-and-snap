@@ -58,19 +58,6 @@ export default function NavBar (props) {
           </div>}
       </nav>
 
-      {/* {servicesDropDown
-        ?
-        <div className={styles.servicesDropDown}>
-          <div className={styles.navLink}>Photography</div>
-          <div className={styles.navLink}>Mapping</div>
-          <div className={styles.navLink}>Roof Inspections</div>
-          <div className={styles.navLink}>Videography</div>
-        </div>
-
-        :
-          ''
-      } */}
-
       {openHamburger && hamburgerInitializer
         ? <div className={styles.hamburgerNav}>
           <div className={styles.topNavItems}>
@@ -132,34 +119,3 @@ export default function NavBar (props) {
     </>
   )
 }
-
-// Services dropdown state
-
-{ /* {servicesDropDown
-            ?
-              <>
-                <div className={styles.navLink} id={styles.servicesNavBar} onClick={()=>setServicesDropDown(false)}>Services <div>&#8963;</div></div>
-                <div className={styles.servicesDropDown}>
-                  <div className={styles.navLink} id={styles.dropDownLink}>Photography</div>
-                  <div className={styles.navLink} id={styles.dropDownLink}>Mapping</div>
-                  <div className={styles.navLink} id={styles.dropDownLink}>Roof Inspections</div>
-                  <div className={styles.navLink} id={styles.dropDownLink}>Videography</div>
-                </div>
-
-              </>
-
-            :
-              <div className={styles.navLink} id={styles.servicesNavBar} onClick={()=>setServicesDropDown(true)}>Services <div>&#8964;</div></div>
-          } */ }
-
-// Services dropdown without state
-// <div className={styles.navLink} id={styles.servicesNavBar}>Services <div>&#8963;</div></div>
-//   <div className={styles.servicesDropDown}>
-//     <div className={styles.navLink} id={styles.dropDownLink}>Photography</div>
-//     <div className={styles.navLink} id={styles.dropDownLink}>Mapping</div>
-//     <div className={styles.navLink} id={styles.dropDownLink}>Roof Inspections</div>
-//     <div className={styles.navLink} id={styles.dropDownLink}>Videography</div>
-//   </div>
-
-// <div className={styles.navLink}>About</div>
-// <div className={styles.navLink}>Login</div>
