@@ -14,11 +14,6 @@ import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '
 
 export default function AuthPage (props) {
 
-  const faqOne = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
-  const faqTwo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
-  const faqThree = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
-  const faqFour = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia'
-
   return (
     <>
       <header>
@@ -57,16 +52,6 @@ export default function AuthPage (props) {
         </div>
         <h1>FAQ's</h1>
         <Faqs 
-          faq={faqOne}
-        />
-        <Faqs 
-          faq={faqTwo}
-        />
-        <Faqs 
-          faq={faqThree}
-        />
-        <Faqs 
-          faq={faqFour}
         />
         <Footer/>
       </main>
