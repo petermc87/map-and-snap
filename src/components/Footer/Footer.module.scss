@@ -1,3 +1,4 @@
+// $border: solid;
 $border: none;
 
 footer{
@@ -19,6 +20,7 @@ ul{
 .navigation{
     border: $border red;
     width: 50%;
+    // justify-content: space-between;
 }
 
 .leftList{
@@ -39,6 +41,7 @@ ul{
 
 .bottomNav{
     border: $border orange;
+    font-size: small;
 }
 
 //Right navigation section
@@ -60,7 +63,21 @@ ul{
 }
 
 .topIconWrapper{
-    border: $border black;
+    border: $border white;
     display: flex;
+}
+
+.topIconWrapper > li, .bottomIconWrapper > li{
+    padding: 0.7rem 0.7rem 0.7rem 0;
+}
+
+.socialLinks > h4{
+    margin-top: 0;
+}
+
+.contactInfo{
+    padding-top: 4rem;
+    border: $border rgb(200, 149, 149); 
+    font-size: small;
 }
 

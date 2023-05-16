@@ -17,8 +17,6 @@ export default function NavBar (props) {
   // Dropdown menu listing the services
   const [servicesDropDown, setServicesDropDown] = useState(false)
 
-  const navigate = useNavigate()
-
   return (
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
