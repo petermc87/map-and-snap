@@ -25,17 +25,16 @@ export default function NavBar (props) {
         <div className={styles.navLink} id={styles.navLogo}>Logo</div>
         <div className={styles.rightNavContainer}>
           {servicesDropDown
-            ? <>
-              <div className={styles.navLink} id={styles.servicesNavBar}>Services <div>&#8963;</div></div>
-              <div className={styles.servicesDropDown} onMouseOut={() => setServicesDropDown(false)}>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Photography</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Mapping</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Roof Inspections</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Videography</div>
-              </div>
-
-            </>
-
+            ? 
+              <>
+                <div className={styles.navLink} id={styles.servicesNavBar}>Services <div>&#8963;</div></div>
+                <div className={styles.servicesDropDown} onMouseOut={() => setServicesDropDown(false)}>
+                  <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Photography</div>
+                  <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Mapping</div>
+                  <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Roof Inspections</div>
+                  <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Videography</div>
+                </div>
+              </>
             : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}>Services <div>&#8964;</div></div>}
           <div className={styles.navLink}>About</div>
           <div className={styles.navLink}>Login</div>

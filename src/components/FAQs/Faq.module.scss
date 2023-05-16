@@ -15,7 +15,6 @@ $solid: none;
 .arrow{
     display: flex;
     justify-content: center;
-    // align-items: center;
     padding-top: 0.5rem;
     font-size: 3rem;
     border: $solid purple;
@@ -24,17 +23,17 @@ $solid: none;
     top: 5.5rem;
     height: 50%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 0.1%,rgb(235, 235, 235) 10%);
-    animation: slide-down ease-in 0.7s forwards;
 }
 
+#arrowDown{
+    animation: slide-down ease-in 0.7s forwards;
+}
 
 @keyframes slide-down {
     0% { 
         transform: translateY(0%);
-        // opacity: 0; 		
     }
     100% { 
         transform: translateY(70%); 
-        // opacity: 1;
     }
    }

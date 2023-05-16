@@ -10,10 +10,7 @@ import Faqs from '../../components/FAQs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
 
-
-
 export default function AuthPage (props) {
-
   return (
     <>
       <header>
@@ -51,9 +48,8 @@ export default function AuthPage (props) {
           <Service />
         </div>
         <h1>FAQ's</h1>
-        <Faqs 
-        />
-        <Footer/>
+        <Faqs />
+        <Footer />
       </main>
     </>
   )
