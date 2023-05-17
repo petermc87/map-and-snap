@@ -113,6 +113,11 @@ $imageRadius: 10px;
     max-width: 5rem;
 }
 
+//Real estate services container
+#realestateServiceContainer{
+    padding-top: 4rem;
+}
+
 
 //Mapping services container styling
 #mapInfo{
@@ -158,6 +163,7 @@ $imageRadius: 10px;
     color: var(--text-dark);
     // padding-left: 2rem;
     padding: 1rem;
+    width: 100%;
 }
 
 #roofServiceContainer{

@@ -7,7 +7,7 @@ export default function Service () {
         {/* <h1>Service</h1> */}
         <div className={styles.image} />
         <div className={styles.info}>
-          <div className={styles.textContainer}>
+          <div className={styles.textContainer} id={styles.realestateServiceContainer}>
             <h1>REAL ESTATE PHOTOGRAHPY</h1>
             <p>From aerial to ground photography, we have you covered.</p>
             <div className={styles.button}>Learn More</div>
