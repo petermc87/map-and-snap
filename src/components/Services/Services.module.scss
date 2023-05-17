@@ -40,9 +40,6 @@ $imageRadius: 10px;
     #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
         padding-left: 0;
      }
-
-
-
 }
 
 //Changing the div sizing and layout based on desktop
@@ -100,6 +97,7 @@ $imageRadius: 10px;
     // border: solid green;
     color: var(--text-bright);
     padding: 0;
+    padding-left: 3rem;
 }
 
 .textContainer > h1{
@@ -135,7 +133,7 @@ $imageRadius: 10px;
 }
 
 #mapServiceContainer{
-    padding: 6rem 2rem 6rem 2rem;
+    padding: 6rem 1rem 6rem 2rem;
     background-color: $mappingColor;
 }
 
@@ -159,6 +157,7 @@ $imageRadius: 10px;
 #roofTextContainer{
     color: var(--text-dark);
     // padding-left: 2rem;
+    padding: 1rem;
 }
 
 #roofServiceContainer{
