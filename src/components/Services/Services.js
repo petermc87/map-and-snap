@@ -6,7 +6,7 @@ export default function Service () {
       <div className={styles.serviceContainer}>
         {/* <h1>Service</h1> */}
         <div className={styles.image} />
-        <div className={styles.info}>
+        <div className={styles.info} id={styles.realestateInfo}>
           <div className={styles.textContainer} id={styles.realestateServiceContainer}>
             <h1>REAL ESTATE PHOTOGRAHPY</h1>
             <p>From aerial to ground photography, we have you covered.</p>

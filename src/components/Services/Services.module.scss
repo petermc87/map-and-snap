@@ -5,75 +5,12 @@ $realEstateColor: rgb(129, 143, 251);
 $mappingColor: rgb(255, 222, 162);
 $roofingColor: rgb(181, 255, 243);
 $imageRadius: 10px;
+$border: solid;
+// $border: none;
+
 
 .serviceContainer{
     display: flex;
-}
-
-//Changing the div sizing and layout based on mobile
-//viewing.
-@media only screen and (max-width: 1000px) {
-    .serviceContainer{
-        flex-direction: column;
-        // padding: 2rem
-    }
-    .textContainer{
-        margin: 2rem;
-        padding-right: 2rem;
-    }
-
-    //Map styling responsiveness.
-    #mapTextContainer{
-        margin: 0;
-    }
-
-    //Roof inspection responsiveness.
-    #roofServiceContainer{
-        border: solid gray;
-        flex-direction: column;
-    }
-
-    .serviceWrapper{
-        flex-direction: column;
-    }
-
-    #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
-        padding-left: 0;
-     }
-}
-
-//Changing the div sizing and layout based on desktop
-//viewing.
-@media only screen and (min-width: 1000px){
-    .serviceContainer{
-        flex-direction: row;
-    };
-    .info{
-        width: 50%;
-        // padding: 2rem;
-    }
-    .image{
-        width: 50%;
-    }
-    .textContainer{
-        padding: 2rem;
-    }
-
-    //Font will get bigger when its a desktop 
-    //screen.
-    #videoTextContainer{
-        h1{
-            font-size: 5rem;
-        }
-    
-        p{
-            font-size: 3rem;
-        }
-    }
-
-    #videoTextContainer{
-        padding: 0 5rem 0 5rem;
-    }
 }
 
 .image{
@@ -93,6 +30,13 @@ $imageRadius: 10px;
     padding-right: 2rem;
 }
 
+//Real estate services container
+#realestateServiceContainer{
+    padding-top: 4rem;
+}
+
+
+//Real estate services container
 .textContainer{
     // border: solid green;
     color: var(--text-bright);
@@ -113,10 +57,6 @@ $imageRadius: 10px;
     max-width: 5rem;
 }
 
-//Real estate services container
-#realestateServiceContainer{
-    padding-top: 4rem;
-}
 
 
 //Mapping services container styling
@@ -198,3 +138,99 @@ $imageRadius: 10px;
     position: relative;
     height: 65rem;
 }
+
+
+//Changing the div sizing and layout based on mobile
+//viewing.
+@media only screen and (max-width: 1000px) {
+    .serviceContainer{
+        flex-direction: column;
+        // padding: 2rem
+    }
+    .textContainer{
+        // margin: 2rem;
+        padding-right: 2rem;
+    }
+
+    //Map styling responsiveness.
+    #mapTextContainer{
+        margin: 0;
+    }
+
+    //Roof inspection responsiveness.
+    #roofServiceContainer{
+        border: $border gray;
+        flex-direction: column;
+    }
+
+    .serviceWrapper{
+        flex-direction: column;
+    }
+
+    #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
+        padding-left: 0;
+     }
+    .image{
+        border: $border black;
+        height: 30rem;
+    }
+    .info{
+        border: $border brown;
+        height: 30rem;
+    }
+    #realestateServiceContainer{
+        padding-top: 1rem;
+        // padding: 0 2rem 0 2rem;
+    }
+    #mapServiceContainer{
+        padding: 6rem 2rem 6rem 2rem;
+    }
+    #mapInfo{
+        border: $border salmon;
+        padding-right: 0;
+        padding-bottom: 3rem;
+    }
+    #realestateInfo{
+        border: $border red;
+        // padding: 0 5rem 0 5rem;
+    }
+    #realestateServiceContainer{
+        border: $border gray;
+        padding: 0 6rem 0 6rem;
+    }
+}
+
+//Changing the div sizing and layout based on desktop
+//viewing.
+@media only screen and (min-width: 1000px){
+    .serviceContainer{
+        flex-direction: row;
+    };
+    .info{
+        width: 50%;
+        // padding: 2rem;
+    }
+    .image{
+        width: 50%;
+    }
+    .textContainer{
+        padding: 2rem;
+    }
+
+    //Font will get bigger when its a desktop 
+    //screen.
+    #videoTextContainer{
+        h1{
+            font-size: 5rem;
+        }
+    
+        p{
+            font-size: 3rem;
+        }
+    }
+
+    #videoTextContainer{
+        padding: 0 5rem 0 5rem;
+    }
+}
+
