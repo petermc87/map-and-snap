@@ -24,7 +24,7 @@ $border: none;
     // border: solid purple;
     height: $servicesHeight;
     background-color: $realEstateColor;
-    display: flex;
+    // display: flex;
     justify-content: center;
 }
 
@@ -34,7 +34,6 @@ $border: none;
 }
 
 
-//Real estate services container
 .textContainer{
     // border: solid green;
     color: var(--text-bright);
@@ -93,16 +92,10 @@ $border: none;
     padding: 9rem 2rem 6rem 2rem;;
 }
 
-#roofInfo{
-    background-color: $roofingColor;
 
-}
 
 #roofTextContainer{
     color: var(--text-dark);
-    // padding-left: 2rem;
-    // padding: 1rem;
-    // width: 100%;
 }
 
 #roofServiceContainer{
@@ -117,10 +110,16 @@ $border: none;
     border-radius: $imageRadius;
 }
 
-
 #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
    padding-left: 2rem;
 }
+
+//FIX THIS!
+// .servicesWrapper > .serviceContainer:nth-child(2)  > .info{
+//     // border: solid black;
+//     background-color: rgb(160, 252, 221);
+//     background-color: $roofingColor;
+// }
 
 
 //Videography container styling.
@@ -135,6 +134,12 @@ $border: none;
     width: 100%;
     position: relative;
     height: 65rem;
+}
+
+//Construction styling
+.servicesWrapper > .serviceContainer:nth-child(3) > .serviceWrapper:nth-child(2) > .info{
+    // border: solid black;
+    background-color: rgb(160, 252, 221);
 }
 
 
@@ -153,12 +158,14 @@ $border: none;
         border: $border gray;
         flex-direction: column;
     }
+
     .serviceWrapper{
         flex-direction: column;
     }
+
     #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
         padding-left: 0;
-     }
+    }
     
     #roofTextContainer{
         padding-top: 4rem

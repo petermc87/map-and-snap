@@ -44,9 +44,7 @@ export default function AuthPage (props) {
             iconStyle='fa-solid fa-business-time fa-3x'
           />
         </div>
-        <div className={styles.servicesWrapper}>
-          <Service />
-        </div>
+        <Service />
         <h1>FAQ's</h1>
         <Faqs />
         <Footer />

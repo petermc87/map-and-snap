@@ -22,11 +22,12 @@ $solid: none;
     width: 100%;
     top: 5rem;
     height: 50%;
+    border-radius: 0 0 1rem 1rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 0.1%,rgb(235, 235, 235) 10%);
 }
 
 #arrowDown{
-    animation: slide-down ease-in 0.7s forwards;
+    animation: slide-down ease-in 0.2s forwards;
 }
 
 @keyframes slide-down {

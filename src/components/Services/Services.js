@@ -2,7 +2,7 @@ import styles from '../Services/Services.module.scss'
 
 export default function Service () {
   return (
-    <>
+    <div className={styles.servicesWrapper}>
       <div className={styles.serviceContainer}>
         <div className={styles.image} />
         <div className={styles.info} id={styles.realestateInfo}>
@@ -57,7 +57,7 @@ export default function Service () {
         <p id={styles.roofParagraph}>Video footage up to 4K in resolution, raw or edited.</p>
         <div className={styles.button}>Learn More</div>
       </div>
-    </>
+    </div>
 
   )
 }
