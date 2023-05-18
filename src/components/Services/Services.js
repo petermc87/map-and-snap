@@ -4,11 +4,10 @@ export default function Service () {
   return (
     <>
       <div className={styles.serviceContainer}>
-        {/* <h1>Service</h1> */}
         <div className={styles.image} />
         <div className={styles.info} id={styles.realestateInfo}>
           <div className={styles.textContainer} id={styles.realestateServiceContainer}>
-            <h1>REAL ESTATE PHOTOGRAHPY</h1>
+            <h1>REAL ESTATE <span>PHOTOGRAPHY</span></h1>
             <p>From aerial to ground photography, we have you covered.</p>
             <div className={styles.button}>Learn More</div>
           </div>
@@ -40,7 +39,6 @@ export default function Service () {
         </div>
 
         <div className={styles.serviceWrapper}>
-
           <div className={styles.info} id={styles.roofInfo}>
             <div className={styles.textContainer} id={styles.roofTextContainer}>
               <h1 id={styles.roofHeading}>CONSTRUCTION </h1>

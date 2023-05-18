@@ -5,8 +5,8 @@ $realEstateColor: rgb(129, 143, 251);
 $mappingColor: rgb(255, 222, 162);
 $roofingColor: rgb(181, 255, 243);
 $imageRadius: 10px;
-$border: solid;
-// $border: none;
+// $border: solid;
+$border: none;
 
 
 .serviceContainer{
@@ -26,8 +26,6 @@ $border: solid;
     background-color: $realEstateColor;
     display: flex;
     justify-content: center;
-    // align-items: center;
-    padding-right: 2rem;
 }
 
 //Real estate services container
@@ -41,7 +39,7 @@ $border: solid;
     // border: solid green;
     color: var(--text-bright);
     padding: 0;
-    padding-left: 3rem;
+    // padding: 2.5rem;
 }
 
 .textContainer > h1{
@@ -78,8 +76,9 @@ $border: solid;
 }
 
 #mapServiceContainer{
-    padding: 6rem 1rem 6rem 2rem;
+    padding: 6rem 2rem 6rem 2rem;
     background-color: $mappingColor;
+    padding-bottom: 9rem;
 }
 
 #mapImage{
@@ -91,7 +90,7 @@ $border: solid;
 .serviceWrapper{
     // border: solid green;
     display: flex;
-    padding: 6rem 2rem 6rem 2rem;;
+    padding: 9rem 2rem 6rem 2rem;;
 }
 
 #roofInfo{
@@ -102,8 +101,8 @@ $border: solid;
 #roofTextContainer{
     color: var(--text-dark);
     // padding-left: 2rem;
-    padding: 1rem;
-    width: 100%;
+    // padding: 1rem;
+    // width: 100%;
 }
 
 #roofServiceContainer{
@@ -130,7 +129,6 @@ $border: solid;
     position: relative;
     z-index: +2;
     bottom: 45rem;
-    // padding: 0 5rem 0 5rem;
 }
 
 #videoImage{
@@ -145,58 +143,70 @@ $border: solid;
 @media only screen and (max-width: 1000px) {
     .serviceContainer{
         flex-direction: column;
-        // padding: 2rem
     }
-    .textContainer{
-        // margin: 2rem;
-        padding-right: 2rem;
-    }
-
     //Map styling responsiveness.
     #mapTextContainer{
         margin: 0;
     }
-
-    //Roof inspection responsiveness.
+    //Roof inspection & construction responsiveness.
     #roofServiceContainer{
         border: $border gray;
         flex-direction: column;
     }
-
     .serviceWrapper{
         flex-direction: column;
     }
-
     #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{
         padding-left: 0;
      }
+    
+    #roofTextContainer{
+        padding-top: 4rem
+    }
+
+    #roofTextContainer > h1{
+        font-size: 2.8rem;
+    }
+
+    //Grabbing the construction container.
+    #roofServiceContainer > .serviceWrapper:nth-child(2), #roofServiceContainer > .serviceWrapper:nth-child(2) > .info > .textContainer{
+        background-color: rgb(160, 252, 221);
+        padding-top: 3rem;
+    }
+
     .image{
         border: $border black;
         height: 30rem;
     }
     .info{
-        border: $border brown;
-        height: 30rem;
+        // border: $border brown;
+        height: 38rem;
     }
-    #realestateServiceContainer{
-        padding-top: 1rem;
-        // padding: 0 2rem 0 2rem;
-    }
-    #mapServiceContainer{
-        padding: 6rem 2rem 6rem 2rem;
-    }
+
     #mapInfo{
-        border: $border salmon;
         padding-right: 0;
-        padding-bottom: 3rem;
     }
+
+    //Real estate.
     #realestateInfo{
         border: $border red;
-        // padding: 0 5rem 0 5rem;
     }
     #realestateServiceContainer{
-        border: $border gray;
-        padding: 0 6rem 0 6rem;
+        padding: 2.5rem;
+    }
+    #realestateServiceContainer > h1 > span{
+        font-size: 2.5rem;
+    }
+
+    //Videography.
+    #videoTextContainer{
+        padding: 3rem;
+    }
+    #videoTextContainer > h1{
+        font-size: 2.6rem;
+    }
+    #videoTextContainer > p{
+        font-size: 1.8rem;
     }
 }
 
