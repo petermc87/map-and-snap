@@ -1,5 +1,6 @@
 // $border: solid;
 $border: none;
+@use '../../button';
 
 footer{
     border: $border black;
@@ -21,6 +22,10 @@ ul{
     border: $border red;
     width: 50%;
     // justify-content: space-between;
+}
+
+li:hover{
+    @extend %lightFadeHover;
 }
 
 .leftList{

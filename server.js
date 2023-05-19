@@ -1,6 +1,8 @@
-// /server.js
+
 require('dotenv').config()
 require('./config/database')
+
+
 const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
@@ -10,6 +12,7 @@ const PORT = process.env.PORT || 3001
 const app = express()
 
 app.use(express.json())// req.body
+
 app.use((req, res, next) => {
   res.locals.data = {}
   next()
@@ -22,12 +25,20 @@ app.use(require('./config/checkToken'))
 /*
 app.use('/api', routes) <====== Finish code once you got it
 */
+
+
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'))
+
+//Add route for contact form.
+// app.use(cors())
+app.use('/api/contact', require('./routes/api/contact'))
 // Protect the API routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn')
 app.use('/api/items', ensureLoggedIn, require('./routes/api/items'))
 app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'))
+
+
 
 app.get('/api/test', (req, res) => {
   res.json({ eureka: 'you have found it' })

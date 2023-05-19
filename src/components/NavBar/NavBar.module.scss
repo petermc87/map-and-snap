@@ -25,6 +25,10 @@
     font-size: 1rem;
 }
 
+.navLink:hover{
+    @extend %lightFadeHover;
+}
+
 #dropDownLink{
     padding: 1rem;
 }
@@ -199,7 +203,6 @@
 
 
 #bottomNavItems > .icons > li{
-    // border: solid white;
     list-style-type: none;
 
 }
