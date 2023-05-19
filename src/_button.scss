@@ -1,3 +1,5 @@
+@use './animations';
+
 %blackButtons{
     background-color: var(--button-color);
     color: white;
@@ -10,6 +12,12 @@
 };
 
 %blackButtons:hover{
-   opacity: 0.5;
    cursor: pointer;
+   @extend %buttonAnimation;
+   animation: hoverFade ease-in 0.1s forwards;
+}
+
+%lightFadeHover{
+    cursor: pointer;
+    animation: hoverTransform ease-in 0.2s forwards;
 }

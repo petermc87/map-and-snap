@@ -14,31 +14,26 @@ $border: none;
 }
 
 .image{
-    // border: solid gray;
     height: $servicesHeight;
     @extend %backgroundImage;
     background-image: url('https://i.imgur.com/RKHnJgw.jpg');
 }
 
 .info{
-    // border: solid purple;
     height: $servicesHeight;
     background-color: $realEstateColor;
-    // display: flex;
     justify-content: center;
 }
 
-//Real estate services container
+//Real estate.
 #realestateServiceContainer{
     padding-top: 4rem;
 }
 
 
 .textContainer{
-    // border: solid green;
     color: var(--text-bright);
     padding: 0;
-    // padding: 2.5rem;
 }
 
 .textContainer > h1{
@@ -56,7 +51,7 @@ $border: none;
 
 
 
-//Mapping services container styling
+//Mapping.
 #mapInfo{
     background-color: $mappingColor;
     color: var(--text-dark);
@@ -85,28 +80,23 @@ $border: none;
 }
 
 
-//Roofing and construction container styling
+//Roofing and construction.
 .serviceWrapper{
-    // border: solid green;
     display: flex;
     padding: 9rem 2rem 6rem 2rem;;
 }
-
-
 
 #roofTextContainer{
     color: var(--text-dark);
 }
 
 #roofServiceContainer{
-    // border: solid black;
     display: flex;
     flex-direction: column;
     background-color: $roofingColor;
 }
 
 #roofImage{
-    // border: solid red;
     border-radius: $imageRadius;
 }
 
@@ -114,17 +104,8 @@ $border: none;
    padding-left: 2rem;
 }
 
-//FIX THIS!
-// .servicesWrapper > .serviceContainer:nth-child(2)  > .info{
-//     // border: solid black;
-//     background-color: rgb(160, 252, 221);
-//     background-color: $roofingColor;
-// }
-
-
 //Videography container styling.
 #videoTextContainer{
-    // border: solid gray;
     position: relative;
     z-index: +2;
     bottom: 45rem;
@@ -138,13 +119,11 @@ $border: none;
 
 //Construction styling
 .servicesWrapper > .serviceContainer:nth-child(3) > .serviceWrapper:nth-child(2) > .info{
-    // border: solid black;
     background-color: rgb(160, 252, 221);
 }
 
 
-//Changing the div sizing and layout based on mobile
-//viewing.
+//---Mobile responsiveness.---//
 @media only screen and (max-width: 1000px) {
     .serviceContainer{
         flex-direction: column;
@@ -219,8 +198,7 @@ $border: none;
     }
 }
 
-//Changing the div sizing and layout based on desktop
-//viewing.
+//---Desktop responsiveness---//
 @media only screen and (min-width: 1000px){
     .serviceContainer{
         flex-direction: row;

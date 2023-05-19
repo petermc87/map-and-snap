@@ -76,9 +76,9 @@ export default function NavBar (props) {
           </div>
           <div className={styles.navItem} id={styles.bottomNavItems}>
             <div className={styles.icons}>
-              <FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' />
-              <FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' />
-              <FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' />
+              <li><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></li>
+              <li><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' /></li>
+              <li><FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' /></li>
             </div>
             <div>&#9400; Drone Map & Snap 2023</div>
           </div>

@@ -1,5 +1,6 @@
 // $solid: solid;
 $solid: none;
+@use '../../button';
 
 .faqWrapper{
     border: $solid black;
@@ -24,6 +25,11 @@ $solid: none;
     height: 50%;
     border-radius: 0 0 1rem 1rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 0.1%,rgb(235, 235, 235) 10%);
+
+}
+
+.arrow:hover{
+    @extend %lightFadeHover;
 }
 
 #arrowDown{
