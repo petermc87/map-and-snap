@@ -4,7 +4,6 @@ import ContactForm from '../ContactForm/ContactForm'
 export default function IntroSection () {
   return (
     <>
-    <ContactForm/>
       <div className={styles.introContainer}>
         <div className={styles.introText}>
           <h1>CONVENIENT, EFFICIENT & TIMELY SERVICE</h1>

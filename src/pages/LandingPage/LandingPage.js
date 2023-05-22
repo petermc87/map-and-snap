@@ -9,10 +9,20 @@ import styles from '../LandingPage/LandingPage.module.scss'
 import Faqs from '../../components/FAQs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import ContactForm from '../../components/ContactForm/ContactForm'
+
 
 export default function AuthPage (props) {
+
+  const [contactForm, setContactForm] = useState(false)
+
   return (
     <>
+      <ContactForm
+        contactForm={contactForm}
+        setContactForm={setContactForm}
+      />
       <header>
         <NavBar />
       </header>
@@ -47,7 +57,9 @@ export default function AuthPage (props) {
         <Service />
         <h1>FAQ's</h1>
         <Faqs />
-        <Footer />
+        <Footer 
+          setContactForm={setContactForm}
+        />
       </main>
     </>
   )

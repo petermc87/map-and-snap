@@ -1,33 +1,32 @@
 const dataController = {
-    async contactForm (req, res, next) {
-        try{
-            const name = req.body.name;
-            const email = req.body.email;
-            const message = req.body.message;
-            const mail = {
-                from: name,
-                to: 'peter@mapandsnap.org',
-                subject: 'Contact Form submission',
-                html: `<p>Name: ${name}</p>
+  async contactForm (req, res, next) {
+    try {
+      const name = req.body.name
+      const email = req.body.email
+      const message = req.body.message
+      const mail = {
+        from: name,
+        to: 'peter@mapandsnap.org',
+        subject: 'Contact Form submission',
+        html: `<p>Name: ${name}</p>
                        <p>Email: ${email}</p>
-                       <p>Message: ${message}</p>`,
-            }
-            next()
-            contactEmail.sendMail(mail, (error) => {
-                if(error){
-                    res.json({ status: 'ERROR'})
-                } else {
-                    res.json({ status: 'Message Sent'})
-                }
-            })
-        } catch (e) {
-            res.status(400).json(e)
+                       <p>Message: ${message}</p>`
+      }
+      next()
+      contactEmail.sendMail(mail, (error) => {
+        if (error) {
+          res.json({ status: 'ERROR' })
+        } else {
+          res.json({ status: 'Message Sent' })
         }
+      })
+    } catch (e) {
+      res.status(400).json(e)
     }
+  }
 }
 
-module.exports =  dataController 
-
+module.exports = dataController
 
 // //Require nodemailer here.
 // const nodemailer = require()
@@ -42,7 +41,7 @@ module.exports =  dataController
 //             pass: process.env.REACT_APP_PASS
 //         },
 //     })
-    
+
 //     //Verify email.
 //     contactForm.verify((error) => {
 //         if(error) {

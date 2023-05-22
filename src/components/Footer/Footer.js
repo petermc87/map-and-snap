@@ -2,14 +2,17 @@ import styles from '../Footer/Footer.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default function Footer () {
+export default function Footer ({ setContactForm }) {
   return (
     <footer>
       <div className={styles.navigation}>
         <ul className={styles.leftList}>
           <div className={styles.topNav}>
             <li>Home</li>
-            <li>Contact</li>
+            <li onClick={() => {
+              setContactForm(true)
+              console.log('click')
+              }}>Contact</li>
             <li>About</li>
           </div>
           <div className={styles.middleNav}>
