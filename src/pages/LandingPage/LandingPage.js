@@ -24,7 +24,9 @@ export default function AuthPage (props) {
         setContactForm={setContactForm}
       />
       <header>
-        <NavBar />
+        <NavBar 
+         setContactForm={setContactForm}
+        />
       </header>
       <main>
         <IntroSection />

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default function NavBar (props) {
+export default function NavBar ({setContactForm}) {
   // Setting the hamburger to open when the icon is click.
   // The initiliazer is only activated when the icon is
   // click and not any other time (i.e. when the page loads).
@@ -21,6 +21,7 @@ export default function NavBar (props) {
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
         <div className={styles.navLink} id={styles.navLogo}>Logo</div>
+    
         <div className={styles.rightNavContainer}>
           {servicesDropDown
             ? <>
@@ -34,6 +35,7 @@ export default function NavBar (props) {
             </>
             : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}>Services <div>&#8964;</div></div>}
           <div className={styles.navLink}>About</div>
+          <div className={styles.navLink} onClick={() => {setContactForm(true)}}>Contact</div>
           <div className={styles.navLink}>Login</div>
 
         </div>
@@ -71,6 +73,10 @@ export default function NavBar (props) {
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}>Services <div>&#8964;</div></div>
                 </>}
             <div className={styles.navItem}>About</div>
+            <div className={styles.navItem} onClick={() => {
+              setContactForm(true)
+              setOpenHamburger(false)
+              }}>Contact</div>
             <div className={styles.navItem}>Login</div>
           </div>
           <div className={styles.navItem} id={styles.bottomNavItems}>

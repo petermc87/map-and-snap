@@ -36,6 +36,14 @@ $solid: none;
     animation: slide-down ease-in 0.2s forwards;
 }
 
+
+@media only screen and (max-width: 500px) {
+    .body{
+        font-size: 0.85rem;
+    }
+}
+
+
 @keyframes slide-down {
     0% { 
         transform: translateY(0%);
