@@ -29,11 +29,11 @@ export default function Footer ({ setContactForm }) {
           <div className={styles.socialLinks}>
             <h4>Check Out Our Socials:</h4>
             <div className={styles.topIconWrapper}>
-              <li><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></li>
-              <li><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' /></li>
+              <a><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></a>
+              <a href='https://www.instagram.com/dronemapsnap/'><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' /></a>
             </div>
             <div className={styles.bottomIconWrapper}>
-              <li><FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' /></li>
+              <a href='https://www.facebook.com/profile.php?id=100091301148574'><FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' /></a>
             </div>
           </div>
           <div className={styles.contactInfo}>

@@ -108,6 +108,12 @@
     }
 }
 
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .hamburgerNav, .hamburgerNavOut{
     // border: solid purple;
     padding: 1rem 5rem 1rem 5rem;
@@ -207,7 +213,7 @@
 
 }
 
-#bottomNavItems > .icons > li:hover{
+#bottomNavItems > .icons > a:hover{
     @extend %lightFadeHover;
 }
 

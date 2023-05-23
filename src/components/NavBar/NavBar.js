@@ -17,6 +17,8 @@ export default function NavBar ({setContactForm}) {
   // Dropdown menu listing the services
   const [servicesDropDown, setServicesDropDown] = useState(false)
 
+  const navigate = useNavigate()
+
   return (
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
@@ -51,7 +53,7 @@ export default function NavBar ({setContactForm}) {
             <div className={styles.lineTwoHm} />
             <div className={styles.lineThreeHm} />
             </div>
-          : <div onClick={() => { setOpenHamburger(false) }} className={styles.hamburgerMenu}>
+          : <div onClick={() => {setOpenHamburger(false)}} className={styles.hamburgerMenu}>
             &#10005;
           </div>}
       </nav>
@@ -82,8 +84,8 @@ export default function NavBar ({setContactForm}) {
           <div className={styles.navItem} id={styles.bottomNavItems}>
             <div className={styles.icons}>
               <li><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></li>
-              <li><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' /></li>
-              <li><FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' /></li>
+              <a href='https://www.instagram.com/dronemapsnap/'><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x'/> </a>
+              <a href='https://www.facebook.com/profile.php?id=100091301148574'><FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' /></a>
             </div>
             <div>&#9400; Drone Map & Snap 2023</div>
           </div>
