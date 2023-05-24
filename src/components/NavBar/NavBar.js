@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default function NavBar ({setContactForm}) {
+export default function NavBar ({setContactForm, realHandleClick}) {
   // Setting the hamburger to open when the icon is click.
   // The initiliazer is only activated when the icon is
   // click and not any other time (i.e. when the page loads).
@@ -29,7 +29,7 @@ export default function NavBar ({setContactForm}) {
             ? <>
               <div className={styles.navLink} id={styles.servicesNavBar}>Services <div>&#8963;</div></div>
               <div className={styles.servicesDropDown} onMouseOut={() => setServicesDropDown(false)}>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Photography</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={realHandleClick}>Photography</div>
                 <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Mapping</div>
                 <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Roof Inspections</div>
                 <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Videography</div>
@@ -66,7 +66,7 @@ export default function NavBar ({setContactForm}) {
               ? <>
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
                 <div className={styles.servicesContainer}>
-                  <div className={styles.navItem}>Photography</div>
+                  <div className={styles.navItem} onClick={realHandleClick}>Photography</div>
                   <div className={styles.navItem}>Mapping</div>
                   <div className={styles.navItem}>Videography</div>
                 </div>
@@ -99,7 +99,7 @@ export default function NavBar ({setContactForm}) {
                   ? <>
                     <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
                     <div className={styles.servicesContainer}>
-                      <div className={styles.navItem}>Photography</div>
+                      <div className={styles.navItem} onClick={realHandleClick}>Photography</div>
                       <div className={styles.navItem}>Mapping</div>
                       <div className={styles.navItem}>Videography</div>
                     </div>

@@ -1,8 +1,8 @@
 import styles from '../Services/Services.module.scss'
 
-export default function Service () {
+export default function Service ({realEstateRef}) {
   return (
-    <div className={styles.servicesWrapper}>
+    <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
         <div className={styles.image} id={styles.realestateImage}/>
         <div className={styles.info} id={styles.realestateInfo}>

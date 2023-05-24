@@ -2,20 +2,29 @@
 import SignUpForm from '../../components/SignUpForm/SignUpForm'
 import LoginForm from '../../components/LoginForm/LoginForm'
 import NavBar from '../../components/NavBar/NavBar'
-import Service from '../../components/Services/Services'
+import Services from '../../components/Services/Services'
 import IntroSection from '../../components/IntroSection/IntroSection'
 import InfoCard from '../../components/InfoCard/InfoCard'
 import styles from '../LandingPage/LandingPage.module.scss'
 import Faqs from '../../components/FAQs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import ContactForm from '../../components/ContactForm/ContactForm'
 
 
 export default function AuthPage (props) {
 
   const [contactForm, setContactForm] = useState(false)
+
+  //Real estate smooth scroll ref.
+  const realEstateRef = useRef(null)
+
+  //Real estate handleClick event.
+  const realHandleClick = () => {
+    realEstateRef.current?.scrollIntoView({behavior: 'smooth'})
+  }
+
 
   return (
     <>
@@ -26,6 +35,7 @@ export default function AuthPage (props) {
       <header>
         <NavBar 
          setContactForm={setContactForm}
+         realHandleClick={realHandleClick}
         />
       </header>
       <main>
@@ -56,7 +66,9 @@ export default function AuthPage (props) {
             iconStyle='fa-solid fa-business-time fa-3x'
           />
         </div>
-        <Service />
+        <Services 
+          realEstateRef={realEstateRef}
+        />
         <h1>FAQ's</h1>
         <Faqs />
         <Footer 
