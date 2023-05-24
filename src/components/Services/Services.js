@@ -4,7 +4,7 @@ export default function Service () {
   return (
     <div className={styles.servicesWrapper}>
       <div className={styles.serviceContainer}>
-        <div className={styles.image} />
+        <div className={styles.image} id={styles.realestateImage}/>
         <div className={styles.info} id={styles.realestateInfo}>
           <div className={styles.textContainer} id={styles.realestateServiceContainer}>
             <h1>REAL ESTATE <span>PHOTOGRAPHY</span></h1>
