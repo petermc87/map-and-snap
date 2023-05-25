@@ -22,7 +22,7 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
   return (
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
-        <div className={styles.navLink} id={styles.navLogo}>Logo</div>
+        <div className={styles.navLink} id={styles.navLogo} onClick={() => {refHandleClick(homeRef)}}>Logo</div>
     
         <div className={styles.rightNavContainer}>
           {servicesDropDown

@@ -24,6 +24,7 @@ export default function AuthPage (props) {
   const videoRef = useRef(null)
   const constructionRef = useRef(null)
   const homeRef = useRef(null)
+  const faqRef = useRef(null)
 
   //DOM reference handleClick event.
   const refHandleClick = (reference) => {
@@ -85,10 +86,13 @@ export default function AuthPage (props) {
           videoRef={videoRef}
           constructionRef={constructionRef}
         />
-        <h1>FAQ's</h1>
+        <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
         <Footer 
           setContactForm={setContactForm}
+          homeRef={homeRef}
+          faqRef={faqRef}
+          refHandleClick={refHandleClick}
         />
       </main>
     </>
