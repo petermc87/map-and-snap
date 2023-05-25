@@ -97,7 +97,14 @@
     #navLogo{
         display: block;
     }
+
 }
+
+
+.hamburgerMenu:hover{
+    @extend %lightFadeHover;
+}
+
 
 //Setting the min width for the hamburger menu
 //to be on the navigation bar before it no longer
