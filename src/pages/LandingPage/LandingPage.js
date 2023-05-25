@@ -17,12 +17,16 @@ export default function AuthPage (props) {
 
   const [contactForm, setContactForm] = useState(false)
 
-  //Real estate smooth scroll ref.
+  //Services ref instances.
   const realEstateRef = useRef(null)
+  const mapRef = useRef(null)
+  const roofInspectionRef = useRef(null)
+  const videoRef = useRef(null)
+  const constructionRef = useRef(null)
 
-  //Real estate handleClick event.
-  const realHandleClick = () => {
-    realEstateRef.current?.scrollIntoView({behavior: 'smooth'})
+  //DOM reference handleClick event.
+  const refHandleClick = (reference) => {
+    reference.current?.scrollIntoView({behavior: 'smooth'})
   }
 
 
@@ -35,7 +39,12 @@ export default function AuthPage (props) {
       <header>
         <NavBar 
          setContactForm={setContactForm}
-         realHandleClick={realHandleClick}
+         refHandleClick={refHandleClick}
+         realEstateRef={realEstateRef}
+         mapRef={mapRef}
+         roofInspectionRef={roofInspectionRef}
+         videoRef={videoRef}
+         constructionRef={constructionRef}
         />
       </header>
       <main>
@@ -68,6 +77,11 @@ export default function AuthPage (props) {
         </div>
         <Services 
           realEstateRef={realEstateRef}
+          mapRef={mapRef}
+          roofInspectionRef={roofInspectionRef}
+          videoRef={videoRef}
+          constructionRef={constructionRef}
+          // mapRef={mapRef}
         />
         <h1>FAQ's</h1>
         <Faqs />

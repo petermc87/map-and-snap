@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default function NavBar ({setContactForm, realHandleClick}) {
+export default function NavBar ({ setContactForm, refHandleClick, realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef }) {
   // Setting the hamburger to open when the icon is click.
   // The initiliazer is only activated when the icon is
   // click and not any other time (i.e. when the page loads).
@@ -29,16 +29,17 @@ export default function NavBar ({setContactForm, realHandleClick}) {
             ? <>
               <div className={styles.navLink} id={styles.servicesNavBar}>Services <div>&#8963;</div></div>
               <div className={styles.servicesDropDown} onMouseOut={() => setServicesDropDown(false)}>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={realHandleClick}>Photography</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Mapping</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Roof Inspections</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)}>Videography</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(realEstateRef)} }>Real Estate</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(mapRef)}}>Mapping</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(roofInspectionRef)}}>Roof Inspections</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(constructionRef)}}>Construction</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(videoRef)}}>Videography</div>
               </div>
             </>
             : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}>Services <div>&#8964;</div></div>}
           <div className={styles.navLink}>About</div>
           <div className={styles.navLink} onClick={() => {setContactForm(true)}}>Contact</div>
-          <div className={styles.navLink}>Login</div>
+          {/* <div className={styles.navLink}>Login</div> */}
 
         </div>
 
@@ -66,9 +67,11 @@ export default function NavBar ({setContactForm, realHandleClick}) {
               ? <>
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
                 <div className={styles.servicesContainer}>
-                  <div className={styles.navItem} onClick={realHandleClick}>Photography</div>
-                  <div className={styles.navItem}>Mapping</div>
-                  <div className={styles.navItem}>Videography</div>
+                  <div className={styles.navItem} onClick={() => {refHandleClick(realEstateRef)}}>Real Estate</div>
+                  <div className={styles.navItem} onClick={() => {refHandleClick(mapRef)}}>Mapping</div>
+                  <div className={styles.navItem} onClick={() => {refHandleClick(roofInspectionRef)}}>Roof Inspections</div>
+                  <div className={styles.navItem} onClick={() => {refHandleClick(constructionRef)}}></div>
+                  <div className={styles.navItem} onClick={() => {refHandleClick(videoRef)}}>Videography</div>
                 </div>
               </>
               : <>
@@ -99,9 +102,11 @@ export default function NavBar ({setContactForm, realHandleClick}) {
                   ? <>
                     <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
                     <div className={styles.servicesContainer}>
-                      <div className={styles.navItem} onClick={realHandleClick}>Photography</div>
-                      <div className={styles.navItem}>Mapping</div>
-                      <div className={styles.navItem}>Videography</div>
+                      <div className={styles.navItem} onClick={() => {refHandleClick(realEstateRef)}}>Real Estate</div>
+                      <div className={styles.navItem} onClick={() => {refHandleClick(mapRef)}}>Mapping</div>
+                      <div className={styles.navItem} onClick={() => {refHandleClick(roofInspectionRef)}}>Roof Inspections</div>
+                      <div className={styles.navItem} onClick={() => {refHandleClick(constructionRef)}}></div>
+                      <div className={styles.navItem} onClick={() => {refHandleClick(videoRef)}}>Videography</div>
                     </div>
                   </>
                   : <>

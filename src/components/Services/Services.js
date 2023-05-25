@@ -1,6 +1,6 @@
 import styles from '../Services/Services.module.scss'
 
-export default function Service ({realEstateRef}) {
+export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef }) {
   return (
     <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
@@ -14,7 +14,7 @@ export default function Service ({realEstateRef}) {
         </div>
       </div>
 
-      <div className={styles.serviceContainer} id={styles.mapServiceContainer}>
+      <div className={styles.serviceContainer} id={styles.mapServiceContainer} ref={mapRef}>
         <div className={styles.info} id={styles.mapInfo}>
           <div className={styles.textContainer} id={styles.mapTextContainer}>
             <h1 id={styles.mapHeading}>DRONE MAPPING SERVICES</h1>
@@ -27,7 +27,7 @@ export default function Service ({realEstateRef}) {
 
       <div className={styles.serviceContainer} id={styles.roofServiceContainer}>
 
-        <div className={styles.serviceWrapper}>
+        <div className={styles.serviceWrapper} ref={roofInspectionRef}>
           <div className={styles.image} id={styles.roofImage} />
           <div className={styles.info} id={styles.roofInfo}>
             <div className={styles.textContainer} id={styles.roofTextContainer}>
@@ -37,8 +37,7 @@ export default function Service ({realEstateRef}) {
             </div>
           </div>
         </div>
-
-        <div className={styles.serviceWrapper}>
+        <div className={styles.serviceWrapper} ref={constructionRef}>
           <div className={styles.info} id={styles.roofInfo}>
             <div className={styles.textContainer} id={styles.roofTextContainer}>
               <h1 id={styles.roofHeading}>CONSTRUCTION </h1>
@@ -51,7 +50,7 @@ export default function Service ({realEstateRef}) {
 
       </div>
 
-      <div className={styles.image} id={styles.videoImage} />
+      <div className={styles.image} id={styles.videoImage} ref={videoRef}/>
       <div className={styles.textContainer} id={styles.videoTextContainer}>
         <h1 id={styles.roofHeading}>VIDEOGRAPHY </h1>
         <p id={styles.roofParagraph}>Video footage up to 4K in resolution, raw or edited.</p>
