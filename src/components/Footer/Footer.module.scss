@@ -21,10 +21,9 @@ ul{
 .navigation{
     border: $border red;
     width: 50%;
-    // justify-content: space-between;
 }
 
-a:hover{
+a:hover, .topNav > li:hover, .middleNav > li:hover{
     @extend %lightFadeHover;
 }
 
@@ -50,9 +49,13 @@ a:hover{
 }
 
 //Right navigation section
+.bottomCopyright{
+    display: none;
+}
 .socials{
     border: $border green;
     width: 50%;
+    padding-left: 2rem;
 }
 
 .rightList{
@@ -86,3 +89,37 @@ a:hover{
     font-size: small;
 }
 
+@media only screen and (max-width: 1000px){
+    //General footer styling.
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 1rem 0 1rem;
+    }
+
+    //Container stylings.
+    .leftList{
+        font-size: 1.15rem;
+    }
+    .bottomNav{
+        display: none;
+    }
+    .bottomCopyright{
+        display: block;
+        padding-top: 1rem;
+    }
+    .socialLinks{
+        margin-top: 4rem;
+    }
+    .topIconWrapper{
+        justify-content: center;
+    }
+    .navigation{
+        text-align: center;
+    }
+    .socials{
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+    }
+}

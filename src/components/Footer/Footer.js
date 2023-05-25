@@ -17,7 +17,7 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
             <li>Privacy Policy</li>
           </div>
           <div className={styles.bottomNav}>
-            <li>Drone Map & Snap 2023</li>
+            <li>&#9400; Drone Map & Snap 2023</li>
           </div>
         </ul>
       </div>
@@ -36,6 +36,7 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
           <div className={styles.contactInfo}>
             <li>Tel: 929-418-5827</li>
             <li>Email: peter@mapandsnap.org</li>
+            <div className={styles.bottomCopyright}><li>&#9400; Drone Map & Snap 2023</li></div>
           </div>
         </ul>
       </div>
