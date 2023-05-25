@@ -23,12 +23,12 @@ export default function AuthPage (props) {
   const roofInspectionRef = useRef(null)
   const videoRef = useRef(null)
   const constructionRef = useRef(null)
+  const homeRef = useRef(null)
 
   //DOM reference handleClick event.
   const refHandleClick = (reference) => {
     reference.current?.scrollIntoView({behavior: 'smooth'})
   }
-
 
   return (
     <>
@@ -45,10 +45,13 @@ export default function AuthPage (props) {
          roofInspectionRef={roofInspectionRef}
          videoRef={videoRef}
          constructionRef={constructionRef}
+         homeRef={homeRef}
         />
       </header>
       <main>
-        <IntroSection />
+        <IntroSection 
+          homeRef={homeRef}
+        />
         <div className={styles.infoCardWrapper}>
           <InfoCard
             title='Coverage for the Tri-State Area'
@@ -81,7 +84,6 @@ export default function AuthPage (props) {
           roofInspectionRef={roofInspectionRef}
           videoRef={videoRef}
           constructionRef={constructionRef}
-          // mapRef={mapRef}
         />
         <h1>FAQ's</h1>
         <Faqs />
