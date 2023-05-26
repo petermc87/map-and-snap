@@ -1,0 +1,64 @@
+#carouselProv{
+    border: solid green;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image{
+    background-size: contain;
+    background-position: center;
+    border: solid gray;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 0.5rem;
+}
+
+// #sliderContainer{
+//     border: solid palevioletred;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
+
+// .buttonWrapper{
+//     border: solid yellow;
+//     display: flex;
+//     width: 100%;
+// }
+// .slidersAndButtons{
+//     border: solid yellow;
+//     height: 100%;
+//     // max-height 70rem;
+// }
+
+#irving{
+    background-image: url('https://i.imgur.com/L9Ie0J8.png');
+    
+}
+
+#beal{
+    background-image: url('https://i.imgur.com/3E2JK9C.jpg');
+}
+
+#jamaica{
+    background-image: url('https://i.imgur.com/SkL4586.jpg');
+}
+
+#eagle{
+    background-image: url('https://i.imgur.com/b0Fon7S.jpg');
+}
+
+.imageContainer{
+    border: solid blue;
+    height: 70%;
+    width: 100%;
+    max-height: 90rem;
+}
+#nextButton, #backButton{
+    position: relative;
+    width: 3rem;
+}

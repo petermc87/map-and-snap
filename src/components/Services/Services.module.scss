@@ -16,13 +16,11 @@ $border: none;
 
 //Images
 .image{
-    height: $servicesHeight;
     @extend %backgroundImage;
     background-image: url('https://i.imgur.com/KnFWtbE.jpg');
 }
 
 #realestateImage{
-    height: $servicesHeight;
     @extend %backgroundImage;
     background-image: url('https://i.imgur.com/irD7VfU.jpg');
 }
