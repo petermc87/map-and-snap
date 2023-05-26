@@ -1,6 +1,6 @@
 import styles from '../Services/Services.module.scss'
 
-export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef }) {
+export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, setOpenModal }) {
   return (
     <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
@@ -9,7 +9,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
           <div className={styles.textContainer} id={styles.realestateServiceContainer}>
             <h1>REAL ESTATE <span>PHOTOGRAPHY</span></h1>
             <p>From aerial to ground photography, we have you covered.</p>
-            <div className={styles.button}>Learn More</div>
+            <div className={styles.button} onClick={() => {setOpenModal(true)}}>Learn More</div>
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
           <div className={styles.textContainer} id={styles.mapTextContainer}>
             <h1 id={styles.mapHeading}>DRONE MAPPING SERVICES</h1>
             <p id={styles.mapParagraph}>3-D and 2-D Mapping for Construction, Agricultural or private.</p>
-            <div className={styles.button}>Learn More</div>
+            <div className={styles.button} onClick={() => {setOpenModal(true)}}>Learn More</div>
           </div>
         </div>
         <div className={styles.image} id={styles.mapImage} />
@@ -33,7 +33,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
             <div className={styles.textContainer} id={styles.roofTextContainer}>
               <h1 id={styles.roofHeading}>ROOF INSPECTION & APPRAISALS</h1>
               <p id={styles.roofParagraph}>For clear and concise aerial imagery to assist your work, we have you covered.</p>
-              <div className={styles.button}>Learn More</div>
+              <div className={styles.button} onClick={() => {setOpenModal(true)}}>Learn More</div>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
             <div className={styles.textContainer} id={styles.roofTextContainer}>
               <h1 id={styles.roofHeading}>CONSTRUCTION </h1>
               <p id={styles.roofParagraph}>Construction progress, surveying or planning</p>
-              <div className={styles.button}>Learn More</div>
+              <div className={styles.button} onClick={() => {setOpenModal(true)}}>Learn More</div>
             </div>
           </div>
           <div className={styles.image} id={styles.roofImage} />
@@ -54,7 +54,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
       <div className={styles.textContainer} id={styles.videoTextContainer}>
         <h1 id={styles.roofHeading}>VIDEOGRAPHY </h1>
         <p id={styles.roofParagraph}>Video footage up to 4K in resolution, raw or edited.</p>
-        <div className={styles.button}>Learn More</div>
+        <div className={styles.button} onClick={() => {setOpenModal(true)}}>Learn More</div>
       </div>
     </div>
 

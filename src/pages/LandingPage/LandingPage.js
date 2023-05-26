@@ -8,14 +8,19 @@ import InfoCard from '../../components/InfoCard/InfoCard'
 import styles from '../LandingPage/LandingPage.module.scss'
 import Faqs from '../../components/FAQs/Faqs'
 import Footer from '../../components/Footer/Footer'
+import ContactForm from '../../components/ContactForm/ContactForm'
+import ModalContainer from '../../components/Modal/ModalContainer'
+
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
 import { useState, useRef } from 'react'
-import ContactForm from '../../components/ContactForm/ContactForm'
 
 
 export default function AuthPage (props) {
 
   const [contactForm, setContactForm] = useState(false)
+
+  //The modal will be open for different purposes.
+  const [openModal, setOpenModal] = useState(false)
 
   //Services ref instances.
   const realEstateRef = useRef(null)
@@ -36,6 +41,10 @@ export default function AuthPage (props) {
       <ContactForm
         contactForm={contactForm}
         setContactForm={setContactForm}
+      />
+      <ModalContainer 
+        openModal={openModal}
+        setOpenModal={setOpenModal}
       />
       <header>
         <NavBar 
@@ -87,6 +96,7 @@ export default function AuthPage (props) {
           roofInspectionRef={roofInspectionRef}
           videoRef={videoRef}
           constructionRef={constructionRef}
+          setOpenModal={setOpenModal}
         />
         <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
