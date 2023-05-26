@@ -52,6 +52,8 @@ export default function AuthPage (props) {
       <main>
         <IntroSection 
           homeRef={homeRef}
+          refHandleClick={refHandleClick}
+          realEstateRef={realEstateRef}
         />
         <div className={styles.infoCardWrapper}>
           <InfoCard

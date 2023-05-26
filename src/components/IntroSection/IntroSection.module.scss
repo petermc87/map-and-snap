@@ -21,6 +21,51 @@
 }
 
 
+//Chevron animation.
+.arrowAnim{
+    width: 3rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    margin-top: 2rem;
+}
+
+.arrow{
+    width: 3rem;
+    height: 3rem;
+    border: 0.8rem solid;
+    border-color: rgb(77, 77, 77) transparent transparent rgb(77,77,77);
+    transform: rotate(225deg);
+}
+
+.arrowSliding{
+    position: absolute;
+    -webkit-animation: slide 2s linear infinite;
+    animation: slide 2s linear infinite;
+}
+
+.arrowAnim:hover{
+    @extend %lightFadeHover;
+}
+
+@keyframes slide{
+    0% {
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }    
+}
+
+
 
 //Setting the max width for smaller intro text
 @media only screen and (max-width: 1000px)  {
@@ -36,7 +81,18 @@
         font-size: 1.5rem;
     }
 
+    //Chevron resize
+    .arrowAnim{
+        width: 18rem;
+    }
+    .arrow{
+        width: 1rem;
+        height: 1rem;
+        border-width: 0.5rem;
+    }
+
 }
+
 
 //Setting the min width the larger text appears
 @media only screen and (min-width: 1000px)  {
@@ -57,10 +113,4 @@
         font-size: 3rem;
     }
 
-}
-
-//Calling the class for the black button that
-//was made in the _button.scss file.
-.button{
-    @extend %blackButtons;
 }
