@@ -14,15 +14,13 @@ import ModalContainer from '../../components/Modal/ModalContainer'
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
 import { useState, useRef } from 'react'
 
-
 export default function AuthPage (props) {
-
   const [contactForm, setContactForm] = useState(false)
 
-  //The modal will be open for different purposes.
+  // The modal will be open for different purposes.
   const [openModal, setOpenModal] = useState(false)
 
-  //Services ref instances.
+  // Services ref instances.
   const realEstateRef = useRef(null)
   const mapRef = useRef(null)
   const roofInspectionRef = useRef(null)
@@ -31,9 +29,9 @@ export default function AuthPage (props) {
   const homeRef = useRef(null)
   const faqRef = useRef(null)
 
-  //DOM reference handleClick event.
+  // DOM reference handleClick event.
   const refHandleClick = (reference) => {
-    reference.current?.scrollIntoView({behavior: 'smooth'})
+    reference.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -42,24 +40,24 @@ export default function AuthPage (props) {
         contactForm={contactForm}
         setContactForm={setContactForm}
       />
-      <ModalContainer 
+      <ModalContainer
         openModal={openModal}
         setOpenModal={setOpenModal}
       />
       <header>
-        <NavBar 
-         setContactForm={setContactForm}
-         refHandleClick={refHandleClick}
-         realEstateRef={realEstateRef}
-         mapRef={mapRef}
-         roofInspectionRef={roofInspectionRef}
-         videoRef={videoRef}
-         constructionRef={constructionRef}
-         homeRef={homeRef}
+        <NavBar
+          setContactForm={setContactForm}
+          refHandleClick={refHandleClick}
+          realEstateRef={realEstateRef}
+          mapRef={mapRef}
+          roofInspectionRef={roofInspectionRef}
+          videoRef={videoRef}
+          constructionRef={constructionRef}
+          homeRef={homeRef}
         />
       </header>
       <main>
-        <IntroSection 
+        <IntroSection
           homeRef={homeRef}
           refHandleClick={refHandleClick}
           realEstateRef={realEstateRef}
@@ -90,7 +88,7 @@ export default function AuthPage (props) {
             iconStyle='fa-solid fa-business-time fa-3x'
           />
         </div>
-        <Services 
+        <Services
           realEstateRef={realEstateRef}
           mapRef={mapRef}
           roofInspectionRef={roofInspectionRef}
@@ -100,7 +98,7 @@ export default function AuthPage (props) {
         />
         <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
-        <Footer 
+        <Footer
           setContactForm={setContactForm}
           homeRef={homeRef}
           faqRef={faqRef}

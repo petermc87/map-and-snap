@@ -22,23 +22,23 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
   return (
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
-        <div className={styles.navLink} id={styles.navLogo} onClick={() => {refHandleClick(homeRef)}}>Logo</div>
-    
+        <div className={styles.navLink} id={styles.navLogo} onClick={() => { refHandleClick(homeRef) }}>Logo</div>
+
         <div className={styles.rightNavContainer}>
           {servicesDropDown
             ? <>
               <div className={styles.navLink} id={styles.servicesNavBar}>Services <div>&#8963;</div></div>
               <div className={styles.servicesDropDown} onMouseOut={() => setServicesDropDown(false)}>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(realEstateRef)} }>Real Estate</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(mapRef)}}>Mapping</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(roofInspectionRef)}}>Roof Inspections</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(constructionRef)}}>Construction</div>
-                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => {refHandleClick(videoRef)}}>Videography</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(realEstateRef) }}>Real Estate</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(mapRef) }}>Mapping</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(roofInspectionRef) }}>Roof Inspections</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(constructionRef) }}>Construction</div>
+                <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(videoRef) }}>Videography</div>
               </div>
             </>
             : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}>Services <div>&#8964;</div></div>}
           <div className={styles.navLink}>About</div>
-          <div className={styles.navLink} onClick={() => {setContactForm(true)}}>Contact</div>
+          <div className={styles.navLink} onClick={() => { setContactForm(true) }}>Contact</div>
           {/* <div className={styles.navLink}>Login</div> */}
 
         </div>
@@ -54,7 +54,7 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
             <div className={styles.lineTwoHm} />
             <div className={styles.lineThreeHm} />
             </div>
-          : <div onClick={() => {setOpenHamburger(false)}} className={styles.hamburgerMenu}>
+          : <div onClick={() => { setOpenHamburger(false) }} className={styles.hamburgerMenu}>
             &#10005;
           </div>}
       </nav>
@@ -62,45 +62,71 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
       {openHamburger && hamburgerInitializer
         ? <div className={styles.hamburgerNav}>
           <div className={styles.topNavItems}>
-            <div className={styles.navItem} onClick={() => {
-              refHandleClick(homeRef)
-              setOpenHamburger(false)}}>Home</div>
+            <div
+              className={styles.navItem} onClick={() => {
+                refHandleClick(homeRef)
+                setOpenHamburger(false)
+              }}
+            >Home
+            </div>
             {expandServices
               ? <>
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
                 <div className={styles.servicesContainer}>
-                  <div className={styles.navItem} onClick={() => {
-                    refHandleClick(realEstateRef)
-                    setOpenHamburger(false)
-                    }}>Real Estate</div>
-                  <div className={styles.navItem} onClick={() => {
-                    refHandleClick(mapRef) 
-                    setOpenHamburger(false)}}>Mapping</div>
-                  <div className={styles.navItem} onClick={() => {
-                    refHandleClick(roofInspectionRef)
-                    setOpenHamburger(false)}}>Roof Inspections</div>
-                  <div className={styles.navItem} onClick={() => {
-                    refHandleClick(constructionRef)
-                    setOpenHamburger(false)}}>Construction</div>
-                  <div className={styles.navItem} onClick={() => {
-                    refHandleClick(videoRef)
-                    setOpenHamburger(false)}}>Videography</div>
+                  <div
+                    className={styles.navItem} onClick={() => {
+                      refHandleClick(realEstateRef)
+                      setOpenHamburger(false)
+                    }}
+                  >Real Estate
+                  </div>
+                  <div
+                    className={styles.navItem} onClick={() => {
+                      refHandleClick(mapRef)
+                      setOpenHamburger(false)
+                    }}
+                  >Mapping
+                  </div>
+                  <div
+                    className={styles.navItem} onClick={() => {
+                      refHandleClick(roofInspectionRef)
+                      setOpenHamburger(false)
+                    }}
+                  >Roof Inspections
+                  </div>
+                  <div
+                    className={styles.navItem} onClick={() => {
+                      refHandleClick(constructionRef)
+                      setOpenHamburger(false)
+                    }}
+                  >Construction
+                  </div>
+                  <div
+                    className={styles.navItem} onClick={() => {
+                      refHandleClick(videoRef)
+                      setOpenHamburger(false)
+                    }}
+                  >Videography
+                  </div>
                 </div>
               </>
               : <>
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}>Services <div>&#8964;</div></div>
                 </>}
             <div className={styles.navItem}>About</div>
-            <div className={styles.navItem} onClick={() => {
-              setContactForm(true)
-              setOpenHamburger(false)
-              }}>Contact</div>
+            <div
+              className={styles.navItem} onClick={() => {
+                setContactForm(true)
+                setOpenHamburger(false)
+              }}
+            >Contact
+            </div>
             <div className={styles.navItem}>Login</div>
           </div>
           <div className={styles.navItem} id={styles.bottomNavItems}>
             <div className={styles.icons}>
               <li><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></li>
-              <a href='https://www.instagram.com/dronemapsnap/'><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x'/> </a>
+              <a href='https://www.instagram.com/dronemapsnap/'><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' /> </a>
               <a href='https://www.facebook.com/profile.php?id=100091301148574'><FontAwesomeIcon icon={faFacebook} className='fa-solid fa-facebook fa-2x' /></a>
             </div>
             <div>&#9400; Drone Map & Snap 2023</div>
@@ -110,28 +136,52 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
         : !openHamburger && hamburgerInitializer
             ? <div className={styles.hamburgerNavOut}>
               <div className={styles.topNavItems}>
-                <div className={styles.navItem} onClick={() => {
-                  refHandleClick(homeRef)
-                  setOpenHamburger(false)}}>Home</div>
+                <div
+                  className={styles.navItem} onClick={() => {
+                    refHandleClick(homeRef)
+                    setOpenHamburger(false)
+                  }}
+                >Home
+                </div>
                 {expandServices
                   ? <>
                     <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
                     <div className={styles.servicesContainer}>
-                      <div className={styles.navItem} onClick={() => {
-                        refHandleClick(realEstateRef)
-                        setOpenHamburger(false)}}>Real Estate</div>
-                      <div className={styles.navItem} onClick={() => {
-                        refHandleClick(mapRef)
-                        setOpenHamburger(false)}}>Mapping</div>
-                      <div className={styles.navItem} onClick={() => {
-                        refHandleClick(roofInspectionRef)
-                        setOpenHamburger(false)}}>Roof Inspections</div>
-                      <div className={styles.navItem} onClick={() => {
-                        refHandleClick(constructionRef)
-                        setOpenHamburger(false)}}>Construction</div>
-                      <div className={styles.navItem} onClick={() => {
-                        refHandleClick(videoRef)
-                        setOpenHamburger(false)}}>Videography</div>
+                      <div
+                        className={styles.navItem} onClick={() => {
+                          refHandleClick(realEstateRef)
+                          setOpenHamburger(false)
+                        }}
+                      >Real Estate
+                      </div>
+                      <div
+                        className={styles.navItem} onClick={() => {
+                          refHandleClick(mapRef)
+                          setOpenHamburger(false)
+                        }}
+                      >Mapping
+                      </div>
+                      <div
+                        className={styles.navItem} onClick={() => {
+                          refHandleClick(roofInspectionRef)
+                          setOpenHamburger(false)
+                        }}
+                      >Roof Inspections
+                      </div>
+                      <div
+                        className={styles.navItem} onClick={() => {
+                          refHandleClick(constructionRef)
+                          setOpenHamburger(false)
+                        }}
+                      >Construction
+                      </div>
+                      <div
+                        className={styles.navItem} onClick={() => {
+                          refHandleClick(videoRef)
+                          setOpenHamburger(false)
+                        }}
+                      >Videography
+                      </div>
                     </div>
                   </>
                   : <>

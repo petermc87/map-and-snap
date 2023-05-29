@@ -8,12 +8,12 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
       <div className={styles.navigation}>
         <ul className={styles.leftList}>
           <div className={styles.topNav}>
-            <li onClick={() => {refHandleClick(homeRef)}}>Home</li>
-            <li onClick={() => {setContactForm(true)}}>Contact</li>
+            <li onClick={() => { refHandleClick(homeRef) }}>Home</li>
+            <li onClick={() => { setContactForm(true) }}>Contact</li>
             <li>About</li>
           </div>
           <div className={styles.middleNav}>
-            <li onClick={() => {refHandleClick(faqRef)}}>FAQs</li>
+            <li onClick={() => { refHandleClick(faqRef) }}>FAQs</li>
             <li>Privacy Policy</li>
           </div>
           <div className={styles.bottomNav}>

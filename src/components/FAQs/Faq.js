@@ -1,7 +1,7 @@
 import styles from '../FAQs/Faq.module.scss'
 import { useState } from 'react'
 
-export default function Faq ({ faq, question}) {
+export default function Faq ({ faq, question }) {
   const [textReveal, setTextReveal] = useState(false)
 
   return (
