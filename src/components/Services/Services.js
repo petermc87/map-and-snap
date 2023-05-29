@@ -1,6 +1,34 @@
 import styles from '../Services/Services.module.scss'
 
-export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, setOpenModal }) {
+export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, setOpenModal, setCurrentPortfolio }) {
+  const realEstatePortfolio = [
+    {
+      name: 'Irving Place',
+      hero: 'https://i.imgur.com/L9Ie0J8.png',
+      description: 'We were assigned to turn a blank living space into a fully furnished apartment using virtual staging',
+      otherImages: ['placeholder', 'placeholder']
+    },
+
+    {
+      name: 'Eagle Crest',
+      hero: 'https://i.imgur.com/b0Fon7S.jpg',
+      description: 'Aerial photographs for a new plot on Eagle Crest resort in Redmond, Oregon.',
+      otherImages: ['placeholder', 'placeholder']
+    },
+
+    {
+      name: 'Beal Na Blath',
+      hero: 'https://i.imgur.com/3E2JK9C.jpg',
+      description: 'Aerial and regular photography of a small cottage in rural Ireland.',
+      otherImages: ['placeholder', 'placeholder']
+    },
+    {
+      name: 'Jamaica, Queens',
+      hero: 'https://i.imgur.com/SkL4586.jpg',
+      description: 'Regular photography for a 2 family home in Jamaica, Queens.',
+      otherImages: ['placeholder', 'placeholder']
+    },
+]
   return (
     <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
@@ -9,7 +37,10 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
           <div className={styles.textContainer} id={styles.realestateServiceContainer}>
             <h1>REAL ESTATE <span>PHOTOGRAPHY</span></h1>
             <p>From aerial to ground photography, we have you covered.</p>
-            <div className={styles.button} onClick={() => { setOpenModal(true) }}>Learn More</div>
+            <div className={styles.button} onClick={() => { 
+              setOpenModal(true) 
+              setCurrentPortfolio(realEstatePortfolio)
+              }}>Learn More</div>
           </div>
         </div>
       </div>

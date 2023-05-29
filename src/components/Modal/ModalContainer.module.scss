@@ -13,16 +13,12 @@
     align-items: center;
     @extend %contactReveal;
     animation: slide-down ease-in 0.5s forwards;
-    // padding: 0 5rem 0 5rem;
 }
-// h1{
-//     margin-bottom: 5rem;
-// }
 
 .textWrapper{
     border: solid black;
-    // padding: 0 3rem 0 3rem;
 }
+
 .closeButton{
     position: absolute;
     left: 85vw;

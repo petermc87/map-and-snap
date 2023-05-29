@@ -34,6 +34,9 @@ export default function AuthPage (props) {
     reference.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // Populate state with an array of elements
+  const [currentPortfolio, setCurrentPortfolio] = useState(null)
+
   return (
     <>
       <ContactForm
@@ -43,6 +46,7 @@ export default function AuthPage (props) {
       <ModalContainer
         openModal={openModal}
         setOpenModal={setOpenModal}
+        currentPortfolio={currentPortfolio}
       />
       <header>
         <NavBar
@@ -95,6 +99,7 @@ export default function AuthPage (props) {
           videoRef={videoRef}
           constructionRef={constructionRef}
           setOpenModal={setOpenModal}
+          setCurrentPortfolio={setCurrentPortfolio}
         />
         <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
