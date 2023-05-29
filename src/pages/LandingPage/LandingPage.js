@@ -37,6 +37,9 @@ export default function AuthPage (props) {
   // Populate state with an array of elements
   const [currentPortfolio, setCurrentPortfolio] = useState(null)
 
+  // Store the information of the current job selected in state
+  const [currentJob, setCurrentJob] = useState(null)
+  
   return (
     <>
       <ContactForm
@@ -47,6 +50,8 @@ export default function AuthPage (props) {
         openModal={openModal}
         setOpenModal={setOpenModal}
         currentPortfolio={currentPortfolio}
+        setCurrentJob={setCurrentJob}
+        currentJob={currentJob}
       />
       <header>
         <NavBar

@@ -1,7 +1,7 @@
 import styles from '../Modal/ModalContainer.module.scss'
 import LearnMoreInfo from './LearnMoreInfo'
 
-export default function ModalContainer ({ openModal, setOpenModal, currentPortfolio }) {
+export default function ModalContainer ({ openModal, setOpenModal, currentPortfolio, currentJob, setCurrentJob }) {
   return (
     <>
       {
@@ -13,6 +13,8 @@ export default function ModalContainer ({ openModal, setOpenModal, currentPortfo
                       <div className={styles.infoContainer}>
                         <LearnMoreInfo
                           currentPortfolio={currentPortfolio}
+                          currentJob={currentJob}
+                          setCurrentJob={setCurrentJob}
                         />
                       </div>
                     </div>
