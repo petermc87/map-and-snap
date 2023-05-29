@@ -1,34 +1,63 @@
 import styles from '../Services/Services.module.scss'
 
 export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, setOpenModal, setCurrentPortfolio }) {
+  
   const realEstatePortfolio = [
+    [
+      {
+        name: 'Irving Place',
+        hero: 'https://i.imgur.com/L9Ie0J8.png',
+        description: 'We were assigned to turn a blank living space into a fully furnished apartment using virtual staging',
+        otherImages: ['placeholder', 'placeholder']
+      },
+  
+      {
+        name: 'Eagle Crest',
+        hero: 'https://i.imgur.com/b0Fon7S.jpg',
+        description: 'Aerial photographs for a new plot on Eagle Crest resort in Redmond, Oregon.',
+        otherImages: ['placeholder', 'placeholder']
+      },
+  
+      {
+        name: 'Beal Na Blath',
+        hero: 'https://i.imgur.com/3E2JK9C.jpg',
+        description: 'Aerial and regular photography of a small cottage in rural Ireland.',
+        otherImages: ['placeholder', 'placeholder']
+      },
+      {
+        name: 'Jamaica, Queens',
+        hero: 'https://i.imgur.com/SkL4586.jpg',
+        description: 'Regular photography for a 2 family home in Jamaica, Queens.',
+        otherImages: ['placeholder', 'placeholder']
+      }
+    ],
     {
-      name: 'Irving Place',
-      hero: 'https://i.imgur.com/L9Ie0J8.png',
-      description: 'We were assigned to turn a blank living space into a fully furnished apartment using virtual staging',
-      otherImages: ['placeholder', 'placeholder']
-    },
+      title: 'Real Estate Photography',
+      serviceBreakdown: 'We have a range of diffent options for your photography needs. These include: Virtual Staging, Professional Photo Editing, Indoor & Outdoor Shots, Aerial & Ground Shots. Please see previous jobs completed below. Hover and click on an image to open the browse through the finished package.'
+    }
+  ]
 
+  const mappingPortfolio = [
+    [
+      {
+        name: 'Juniper Park',
+        hero: 'https://i.imgur.com/6IIAWVp.png',
+        description: '3-D model of Juniper Park in Queens, New York. This was a test map used to cross reference measurement features of WebODM.',
+        otherImages: ['placeholder', 'placeholder']
+      },
+      {
+        name: 'Balleymoney Church & Graveyard',
+        hero: 'https://i.imgur.com/yVzXdwa.png',
+        description: 'Old abandoned church near Beal Na Blath, Co. Cork, Ireland. This was a test map shot at a lower altitiude for better detail and accuracy.',
+        otherImages: ['placeholder', 'placeholder']
+      }
+    ],
     {
-      name: 'Eagle Crest',
-      hero: 'https://i.imgur.com/b0Fon7S.jpg',
-      description: 'Aerial photographs for a new plot on Eagle Crest resort in Redmond, Oregon.',
-      otherImages: ['placeholder', 'placeholder']
-    },
-
-    {
-      name: 'Beal Na Blath',
-      hero: 'https://i.imgur.com/3E2JK9C.jpg',
-      description: 'Aerial and regular photography of a small cottage in rural Ireland.',
-      otherImages: ['placeholder', 'placeholder']
-    },
-    {
-      name: 'Jamaica, Queens',
-      hero: 'https://i.imgur.com/SkL4586.jpg',
-      description: 'Regular photography for a 2 family home in Jamaica, Queens.',
-      otherImages: ['placeholder', 'placeholder']
-    },
-]
+      title: 'Drone Mapping Services',
+      serviceBreakdown: '3-D Photogrammetry surveying using Post Processing Kinematics (PPK) technology. Up to 1/2inch accurate surveying available soon.'
+    }
+  ]
+  
   return (
     <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
@@ -37,10 +66,13 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
           <div className={styles.textContainer} id={styles.realestateServiceContainer}>
             <h1>REAL ESTATE <span>PHOTOGRAPHY</span></h1>
             <p>From aerial to ground photography, we have you covered.</p>
-            <div className={styles.button} onClick={() => { 
-              setOpenModal(true) 
-              setCurrentPortfolio(realEstatePortfolio)
-              }}>Learn More</div>
+            <div
+              className={styles.button} onClick={() => {
+                setOpenModal(true)
+                setCurrentPortfolio(realEstatePortfolio)
+              }}
+            >Learn More
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +82,10 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
           <div className={styles.textContainer} id={styles.mapTextContainer}>
             <h1 id={styles.mapHeading}>DRONE MAPPING SERVICES</h1>
             <p id={styles.mapParagraph}>3-D and 2-D Mapping for Construction, Agricultural or private.</p>
-            <div className={styles.button} onClick={() => { setOpenModal(true) }}>Learn More</div>
+            <div className={styles.button} onClick={() => { 
+              setOpenModal(true) 
+              setCurrentPortfolio(mappingPortfolio)
+              }}>Learn More</div>
           </div>
         </div>
         <div className={styles.image} id={styles.mapImage} />
