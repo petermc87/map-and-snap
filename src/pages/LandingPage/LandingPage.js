@@ -10,6 +10,7 @@ import Faqs from '../../components/FAQs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import ModalContainer from '../../components/Modal/ModalContainer'
+import ModalContainerJob from '../../components/Modal/ModalContainer'
 
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
 import { useState, useRef } from 'react'
@@ -19,6 +20,8 @@ export default function AuthPage (props) {
 
   // The modal will be open for different purposes.
   const [openModal, setOpenModal] = useState(false)
+  // Modal for an individual job carousel.
+  const [openModalJob, setOpenModalJob] = useState(false)
 
   // Services ref instances.
   const realEstateRef = useRef(null)
@@ -49,9 +52,16 @@ export default function AuthPage (props) {
       <ModalContainer
         openModal={openModal}
         setOpenModal={setOpenModal}
+        setOpenModalJob={setOpenModalJob}
         currentPortfolio={currentPortfolio}
         setCurrentJob={setCurrentJob}
         currentJob={currentJob}
+      />
+      <ModalContainerJob 
+        openModalJob={openModalJob}
+        setOpenModalJob={setOpenModalJob}
+        currentJob={currentJob}
+        setCurrentJob={setCurrentJob}
       />
       <header>
         <NavBar

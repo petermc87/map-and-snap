@@ -1,9 +1,12 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import styles from '../Modal/LearnMoreInfo.module.scss'
 
-export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob }) {
+export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob, setOpenModalJob }) {
+
+  const [jobCarousel, setJobCarousel] = useState(false)
+
   return (
     <CarouselProvider
       id={styles.carouselProv}
@@ -24,7 +27,14 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                   <img className={styles.image} style={{ backgroundImage: `url(${job.hero})` }} 
                     onMouseOver={() => {setCurrentJob(job)}}
                     onMouseOut={() => {setCurrentJob(null)}}
+                    onClick={() => {
+                      setOpenModalJob(true)
+                      setJobCarousel(true)
+                      console.log('click')
+                    }}
+
                   />
+                  {/* Job name text layered over the image */}
                   {currentJob
                   ? <>
                       <h1>{currentJob.name}</h1>
@@ -34,7 +44,13 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
               </Slide>
             )
           })
-          : ''}
+          // Add the other mapping function here
+          : 
+            jobCarousel
+              ?
+                <div>Job Carousel</div>
+              :
+              ''}
       </Slider>
       <div className={styles.buttonWrapper}>
         <ButtonBack id={styles.backButton}>Back</ButtonBack>
