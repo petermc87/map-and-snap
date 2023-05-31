@@ -2,11 +2,9 @@ import {React, useState} from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import styles from '../Modal/LearnMoreInfo.module.scss'
+import { faCloudUpload } from '@fortawesome/free-solid-svg-icons'
 
 export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob, setOpenModalJob }) {
-
-  const [jobCarousel, setJobCarousel] = useState(false)
-
   return (
     <CarouselProvider
       id={styles.carouselProv}
@@ -29,8 +27,6 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                     onMouseOut={() => {setCurrentJob(null)}}
                     onClick={() => {
                       setOpenModalJob(true)
-                      setJobCarousel(true)
-                      console.log('click')
                     }}
 
                   />
@@ -46,11 +42,8 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
           })
           // Add the other mapping function here
           : 
-            jobCarousel
-              ?
-                <div>Job Carousel</div>
-              :
-              ''}
+          ''}
+
       </Slider>
       <div className={styles.buttonWrapper}>
         <ButtonBack id={styles.backButton}>Back</ButtonBack>
@@ -59,3 +52,12 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
     </CarouselProvider>
   )
 }
+
+
+
+
+            // currentPortfolio && jobCarousel
+            //   ?
+            //     <div className={styles.jobCarousel}>Job Carousel</div>
+            //   :
+            //   ''}

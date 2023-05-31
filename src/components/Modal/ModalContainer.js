@@ -2,6 +2,7 @@ import styles from '../Modal/ModalContainer.module.scss'
 import LearnMoreInfo from './LearnMoreInfo'
 
 export default function ModalContainer ({ openModal, setOpenModal, currentPortfolio, currentJob, setCurrentJob, setOpenModalJob }) {
+  // console.log(currentJob)
   return (
     <>
       {
