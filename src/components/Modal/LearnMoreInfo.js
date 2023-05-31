@@ -4,7 +4,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css'
 import styles from '../Modal/LearnMoreInfo.module.scss'
 import { faCloudUpload } from '@fortawesome/free-solid-svg-icons'
 
-export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob, setOpenModalJob }) {
+export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob, setOpenModalJob, setViewingJob }) {
   return (
     <CarouselProvider
       id={styles.carouselProv}
@@ -27,6 +27,7 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                     onMouseOut={() => {setCurrentJob(null)}}
                     onClick={() => {
                       setOpenModalJob(true)
+                      setViewingJob(currentJob)
                     }}
 
                   />

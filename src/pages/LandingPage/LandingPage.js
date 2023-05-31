@@ -42,7 +42,10 @@ export default function AuthPage (props) {
 
   // Store the information of the current job selected in state
   const [currentJob, setCurrentJob] = useState(null)
+
+  const [viewingJob, setViewingJob] = useState(null)
   
+  // console.log(viewingJob)
   return (
     <>
       <ContactForm
@@ -56,13 +59,20 @@ export default function AuthPage (props) {
         currentPortfolio={currentPortfolio}
         setCurrentJob={setCurrentJob}
         currentJob={currentJob}
+        setViewingJob={setViewingJob}
       />
-      <ModalContainerJob 
-        openModalJob={openModalJob}
-        setOpenModalJob={setOpenModalJob}
-        currentJob={currentJob}
-        setCurrentJob={setCurrentJob}
-      />
+      {viewingJob !== null ?
+            <>
+                <ModalContainerJob 
+                  openModalJob={openModalJob}
+                  setOpenModalJob={setOpenModalJob}
+                  currentJob={currentJob}
+                  setCurrentJob={setCurrentJob}
+              />
+            </>
+            :
+            ''}
+
       <header>
         <NavBar
           setContactForm={setContactForm}
