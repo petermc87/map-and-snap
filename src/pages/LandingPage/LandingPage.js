@@ -20,8 +20,9 @@ export default function AuthPage (props) {
 
   // The modal will be open for different purposes.
   const [openModal, setOpenModal] = useState(false)
-  // Modal for an individual job carousel.
-  const [openModalJob, setOpenModalJob] = useState(false)
+
+  // // Modal for an individual job carousel.
+  // const [openModalJob, setOpenModalJob] = useState(false)
 
   // Services ref instances.
   const realEstateRef = useRef(null)
@@ -43,7 +44,7 @@ export default function AuthPage (props) {
   // Store the information of the current job selected in state
   const [currentJob, setCurrentJob] = useState(null)
 
-  const [viewingJob, setViewingJob] = useState(null)
+  // const [viewingJob, setViewingJob] = useState(null)
   
   // console.log(viewingJob)
   return (
@@ -55,13 +56,13 @@ export default function AuthPage (props) {
       <ModalContainer
         openModal={openModal}
         setOpenModal={setOpenModal}
-        setOpenModalJob={setOpenModalJob}
+        // setOpenModalJob={setOpenModalJob}
         currentPortfolio={currentPortfolio}
         setCurrentJob={setCurrentJob}
         currentJob={currentJob}
-        setViewingJob={setViewingJob}
+        // setViewingJob={setViewingJob}
       />
-      {viewingJob !== null ?
+      {/* {viewingJob !== null ?
             <>
                 <ModalContainerJob 
                   openModalJob={openModalJob}
@@ -71,7 +72,7 @@ export default function AuthPage (props) {
               />
             </>
             :
-            ''}
+            ''} */}
 
       <header>
         <NavBar

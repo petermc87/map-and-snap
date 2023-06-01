@@ -2,21 +2,35 @@ import {React, useState} from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import styles from '../Modal/LearnMoreInfo.module.scss'
-import { faCloudUpload } from '@fortawesome/free-solid-svg-icons'
 
-export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob, setOpenModalJob, setViewingJob }) {
+export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob }) {
+
+  //Setting the job to be viewed.
+  const [viewingJob, setViewingJob] = useState(null)
+
+
+
   return (
     <CarouselProvider
       id={styles.carouselProv}
       naturalSlideWidth={100}
       naturalSlideHeight={125}
-      totalSlides={currentPortfolio[0].length}
+
+      // Position one in the portfolio object is the array of jobs.
+        totalSlides={
+          !viewingJob?
+            currentPortfolio[0].length
+            :
+            viewingJob.otherImages.length
+        }
+      
     >
       <p>{currentPortfolio[1].serviceBreakdown}</p>
       <Slider>
         {/* Indexing the portfolio jobs per service and returning the hero image in the slide. */}
-        {currentPortfolio
+        {!viewingJob && currentPortfolio
           ? currentPortfolio[0].map((job, i) => {
+            console.log(job.hero)
             return (
               <Slide index={i}>
                 <div className={styles.imageContainer} >
@@ -25,11 +39,7 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                   <img className={styles.image} style={{ backgroundImage: `url(${job.hero})` }} 
                     onMouseOver={() => {setCurrentJob(job)}}
                     onMouseOut={() => {setCurrentJob(null)}}
-                    onClick={() => {
-                      setOpenModalJob(true)
-                      setViewingJob(currentJob)
-                    }}
-
+                    onClick={() => {setViewingJob(job)}}
                   />
                   {/* Job name text layered over the image */}
                   {currentJob
@@ -41,9 +51,23 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
               </Slide>
             )
           })
+
           // Add the other mapping function here
           : 
-          ''}
+          
+          // viewingJob && currentPortfolio ?
+
+            viewingJob.otherImages.map((image, i) => {
+              console.log(image)
+              return(
+                <Slide index={i}>
+                <div className={styles.imageContainer}>
+                  <img className={styles.image} style={{ backgroundImage: `url(${image[i]})`}}/>
+                </div>
+              </Slide>
+              )
+            })
+            }
 
       </Slider>
       <div className={styles.buttonWrapper}>

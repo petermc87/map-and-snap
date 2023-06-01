@@ -22,8 +22,9 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
         name: 'Beal Na Blath',
         hero: 'https://i.imgur.com/3E2JK9C.jpg',
         description: 'Aerial and regular photography of a small cottage in rural Ireland.',
-        otherImages: ['placeholder', 'placeholder']
+        otherImages: ['https://i.imgur.com/XHFQ1vu.jpg', 'https://i.imgur.com/Q7VYyio.jpg', 'https://i.imgur.com/75QIRCp.jpg', 'https://i.imgur.com/4AGIadS.jpg', 'https://i.imgur.com/MYy301H.jpg', 'https://i.imgur.com/LHHZmhE.jpg','https://i.imgur.com/KaJoPtO.jpg', 'https://i.imgur.com/ik0ZrgO.jpg', 'https://i.imgur.com/g3jeBV6.jpg', 'https://i.imgur.com/VMF8zzp.jpg']
       },
+      
       {
         name: 'Jamaica, Queens',
         hero: 'https://i.imgur.com/SkL4586.jpg',
