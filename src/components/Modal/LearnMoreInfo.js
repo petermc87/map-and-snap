@@ -8,15 +8,6 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
   //Setting the job to be viewed.
   const [viewingJob, setViewingJob] = useState(null)
 
-
-  // console.log(currentPortfolio[0][2].otherImages[0])
-
-  // if(viewingJob){
-  //   //Checking the viewingJob dataset
-  //   console.log(viewingJob)
-  //   // console.log(viewingJob.otherImages[0][0])
-  // }
-
   return (
     <CarouselProvider
       id={styles.carouselProv}
@@ -32,7 +23,7 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
         }
       
     >
-      <p>{currentPortfolio[1].serviceBreakdown}</p>
+      <p className={styles.carouselParagraph}>{currentPortfolio[1].serviceBreakdown}</p>
       <Slider>
 
         {/* Indexing the portfolio jobs per service and returning the hero image in the slide. */}
@@ -53,7 +44,10 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                   {/* Job name text layered over the image */}
                   {currentJob
                   ? <>
+                    <div className={styles.imageOverlayText}>
                       <h1>{currentJob.name}</h1>
+                      <h2>Click for images</h2>
+                    </div>
                     </>
                   : ''}
                 </div>
@@ -67,19 +61,19 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
             viewingJob.otherImages.map((image, i) => {
               return(
                 <Slide index={i}>
+                  <div className={styles.closeButton} onClick={() => {setViewingJob(null)}}>&#128939;</div>
                   <div className={styles.imageContainer} >
-                    {/* When you hover over an image, it will set that current job in state so that it can be viewed
-                    by the client. */}
-                    <img className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+                    <img className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
                   </div>
                 </Slide>
               )
             })
-            }
+          }
+
       </Slider>
       <div className={styles.buttonWrapper}>
-        <ButtonBack id={styles.backButton}>Back</ButtonBack>
-        <ButtonNext id={styles.nextButton}>Next</ButtonNext>
+        <ButtonBack id={styles.backButton}>&#129092;</ButtonBack>
+        <ButtonNext id={styles.nextButton}>&#129094;</ButtonNext>
       </div>
     </CarouselProvider>
   )

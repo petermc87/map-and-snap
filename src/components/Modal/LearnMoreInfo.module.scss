@@ -1,7 +1,7 @@
 @use '../../animations';
 
 #carouselProv{
-    border: solid green;
+    // border: solid green;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
 .image{
     background-size: contain;
     background-position: center;
-    border: solid gray;
+    // border: solid gray;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -19,7 +19,7 @@
 }
 
 .imageContainer{
-    border: solid blue;
+    // border: solid blue;
     height: 70%;
     width: 100%;
     max-height: 90rem;
@@ -36,21 +36,62 @@
     animation: fadeInBack 0.2s forwards;
 }
 
-.imageContainer > h1 {
+.imageOverlayText{
     position: absolute;
-    font-size: 250%;
+    font-size: 100%;
     border-radius: 10px;
     padding: 5px;
     background-color: rgb(240, 240, 240, 0.8);
-    @extend %contactReveal;
-    animation: hoverTransform 0.2s forwards;
+    text-align: center;
 }
+
+.imageOverlayText > h2 {
+    color: var(--text-dark);
+    font-size: 85%;
+}
+
+#jobImage:hover{
+    cursor: auto;
+}
+
+.closeButton{
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
 
 #nextButton, #backButton{
     position: relative;
+    display: flex;
     width: 3rem;
+    border-radius: 0.2rem;
+    padding: 0.4rem 0.1rem 0 0;
+    font-size: 1.5rem;
+    // align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 0.5rem;
+
+    background-color: gray;
 }
 
 .jobCarousel{
     z-index: +5;
+}
+
+.buttonWrapper{
+    // border: solid black;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+@media only screen and (max-width: 430px){
+    .carouselParagraph{
+        margin: 1rem;
+    }
+    .image{
+        margin: 0.8rem
+    }
 }
