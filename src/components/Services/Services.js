@@ -8,16 +8,14 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
         name: 'Irving Place',
         hero: 'https://i.imgur.com/L9Ie0J8.png',
         description: 'We were assigned to turn a blank living space into a fully furnished apartment using virtual staging',
-        // otherImages: ['placeholder', 'placeholder']
-        otherImages: ["https://i.imgur.com/KaJoPtO.jpg"]
+        otherImages: ['https://i.imgur.com/UdBEVxQ.png','https://i.imgur.com/gx3bLHW.png',"https://i.imgur.com/gR4kzcH.png",'https://i.imgur.com/VJEWVOy.png', 'https://i.imgur.com/Q3Vf05i.png', 'https://i.imgur.com/hPTrHMx.png', 'https://i.imgur.com/xKFMs02.png']
       },
   
       {
         name: 'Eagle Crest',
         hero: 'https://i.imgur.com/b0Fon7S.jpg',
         description: 'Aerial photographs for a new plot on Eagle Crest resort in Redmond, Oregon.',
-        // otherImages: ['placeholder', 'placeholder']
-        otherImages: ['https://i.imgur.com/XHFQ1vu.jpg']
+        otherImages: ['https://i.imgur.com/7jJ2xtg.jpg', 'https://i.imgur.com/evtccPv.jpg', 'https://i.imgur.com/Trujd9x.jpg','https://i.imgur.com/Kr08su6.jpg']
       },
   
       {
@@ -31,8 +29,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
         name: 'Jamaica, Queens',
         hero: 'https://i.imgur.com/SkL4586.jpg',
         description: 'Regular photography for a 2 family home in Jamaica, Queens.',
-        // otherImages: ['placeholder', 'placeholder']
-        otherImages: ['https://i.imgur.com/XHFQ1vu.jpg']
+        otherImages: ['https://i.imgur.com/FaoRDSB.jpg', 'https://i.imgur.com/xR6Y4op.jpg', 'https://i.imgur.com/Ps6LwTB.jpg', 'https://i.imgur.com/LGjtL1T.jpg','https://i.imgur.com/xGcSTIp.jpg', 'https://i.imgur.com/8alv6PZ.jpg', 'https://i.imgur.com/AJ2kfTy.jpg', 'https://i.imgur.com/fndt30m.jpg', 'https://i.imgur.com/jQFTSYD.jpg', 'https://i.imgur.com/OTBAlDV.jpg', 'https://i.imgur.com/PzN7nQN.jpg', 'https://i.imgur.com/pJ9igvw.jpg', 'https://i.imgur.com/CrPgSQn.jpg']
       }
     ],
     {

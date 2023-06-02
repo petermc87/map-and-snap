@@ -7,6 +7,8 @@
     position: relative;
     padding: 15rem 2rem 15rem 2rem;
     @extend %backgroundImage;
+    display: flex;
+    flex-direction: column;
 }
 
 .introText{
@@ -20,7 +22,6 @@
     overflow: hidden;
 }
 
-
 //Chevron animation.
 .arrowAnim{
     width: 3rem;
@@ -28,8 +29,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40rem;
+    width: 100%;
     margin-top: 2rem;
+    // border: solid black;
+    padding: 1rem 0 1rem 0;
 }
 
 .arrow{
@@ -38,12 +41,17 @@
     border: 0.8rem solid;
     border-color: rgb(77, 77, 77) transparent transparent rgb(77,77,77);
     transform: rotate(225deg);
+    // background-color: gray;
 }
 
 .arrowSliding{
     position: absolute;
     -webkit-animation: slide 2s linear infinite;
     animation: slide 2s linear infinite;
+    
+    display: flex;
+    // width: 100%;
+    justify-content: center;
 }
 
 .arrowAnim:hover{
@@ -79,11 +87,6 @@
     
     .introText > p{
         font-size: 1.5rem;
-    }
-
-    //Chevron resize
-    .arrowAnim{
-        width: 18rem;
     }
     .arrow{
         width: 1rem;
