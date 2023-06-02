@@ -9,11 +9,13 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
   const [viewingJob, setViewingJob] = useState(null)
 
 
-  console.log(currentPortfolio[0][2].otherImages)
+  // console.log(currentPortfolio[0][2].otherImages[0])
 
-  if(viewingJob){
-    console.log(viewingJob.otherImages[0][0])
-  }
+  // if(viewingJob){
+  //   //Checking the viewingJob dataset
+  //   console.log(viewingJob)
+  //   // console.log(viewingJob.otherImages[0][0])
+  // }
 
   return (
     <CarouselProvider
@@ -32,11 +34,13 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
     >
       <p>{currentPortfolio[1].serviceBreakdown}</p>
       <Slider>
+
         {/* Indexing the portfolio jobs per service and returning the hero image in the slide. */}
         {!viewingJob 
           ? currentPortfolio[0].map((job, i) => {
             // console.log(job.hero)
             return (
+  
               <Slide index={i}>
                 <div className={styles.imageContainer} >
                   {/* When you hover over an image, it will set that current job in state so that it can be viewed
@@ -54,28 +58,24 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                   : ''}
                 </div>
               </Slide>
+
             )
           })
 
-          // Add the other mapping function here
           : 
-
+            // Mapping the images per job
             viewingJob.otherImages.map((image, i) => {
-              // console.log(image)
-              const currentImage = image[i]
               return(
                 <Slide index={i}>
-                <div className={styles.imageContainer} >
-                  {/* When you hover over an image, it will set that current job in state so that it can be viewed
-                  by the client. */}
-                  <img className={styles.image} style={{ backgroundImage: `url(${currentImage}` }} />
-                  {/* Job name text layered over the image */}
-                </div>
-              </Slide>
+                  <div className={styles.imageContainer} >
+                    {/* When you hover over an image, it will set that current job in state so that it can be viewed
+                    by the client. */}
+                    <img className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+                  </div>
+                </Slide>
               )
             })
             }
-
       </Slider>
       <div className={styles.buttonWrapper}>
         <ButtonBack id={styles.backButton}>Back</ButtonBack>
