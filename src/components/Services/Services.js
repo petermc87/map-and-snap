@@ -44,13 +44,13 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
         name: 'Juniper Park',
         hero: 'https://i.imgur.com/6IIAWVp.png',
         description: '3-D model of Juniper Park in Queens, New York. This was a test map used to cross reference measurement features of WebODM.',
-        otherImages: ['placeholder', 'placeholder']
+        otherImages: ['https://i.imgur.com/GZDn7ZG.jpg', 'https://i.imgur.com/vJkZvZn.jpg', 'https://i.imgur.com/gYDfwuI.png']
       },
       {
         name: 'Balleymoney Church & Graveyard',
         hero: 'https://i.imgur.com/yVzXdwa.png',
         description: 'Old abandoned church near Beal Na Blath, Co. Cork, Ireland. This was a test map shot at a lower altitiude for better detail and accuracy.',
-        otherImages: ['placeholder', 'placeholder']
+        otherImages: ['https://i.imgur.com/KhLpL4k.jpg', 'https://i.imgur.com/T9TDmK9.jpg', 'https://i.imgur.com/Q538WKQ.jpg', 'https://i.imgur.com/bxxC1iA.png', 'https://i.imgur.com/fdAQ4uw.png']
       }
     ],
     {
