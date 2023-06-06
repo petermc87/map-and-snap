@@ -17,8 +17,9 @@ $border: none;
 //Images
 .image{
     @extend %backgroundImage;
-    background-image: url('https://i.imgur.com/KnFWtbE.jpg');
+    background-image: url('https://images.unsplash.com/photo-1517049942754-4ac1733bd0f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1295&q=80');
 }
+
 
 #realestateImage{
     @extend %backgroundImage;
@@ -112,8 +113,12 @@ $border: none;
     background-color: $roofingColor;
 }
 
-#roofImage{
+#roofImage, #constructionImage{
     border-radius: $imageRadius;
+}
+
+#constructionImage{
+    background-image: url('https://images.unsplash.com/photo-1532562145520-b8cce2486cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80');
 }
 
 #roofServiceContainer > .serviceWrapper:nth-child(1) > #roofInfo > #roofTextContainer{

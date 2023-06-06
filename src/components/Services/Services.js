@@ -112,7 +112,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
               <div className={styles.button} onClick={() => { setOpenModal(true) }}>Learn More</div>
             </div>
           </div>
-          <div className={styles.image} id={styles.roofImage} />
+          <div className={styles.image} id={styles.constructionImage} />
         </div>
 
       </div>
