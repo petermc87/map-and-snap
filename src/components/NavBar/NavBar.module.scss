@@ -3,7 +3,7 @@
 .navContainer{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 0.5rem;
     position: fixed;
     width: 100vw;
     color: var(--text-dark);
@@ -12,6 +12,7 @@
     border-bottom: solid var(--soft-border);
     border-width: 0.6px;
     z-index: +3;
+    align-items: center;
 }
 
 .rightNavContainer{
@@ -68,6 +69,12 @@
 
 }
 
+#navLogo > img{
+    height: 5rem;
+    // border: solid red;
+    // margin: 0;
+    padding: 0;
+}
 
 //Setting the max width for the Hamburger menu
 //to appear on the navigation bar
