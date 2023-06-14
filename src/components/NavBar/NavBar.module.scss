@@ -71,8 +71,6 @@
 
 #navLogo > img{
     height: 3.7rem;
-    // border: solid red;
-    // margin: 0;
     padding: 0;
 }
 
@@ -177,6 +175,12 @@ a{
 #services{
     padding-left: 0.9rem;
     border-width: 0.05rem;
+    display: flex;
+    align-items: center;
+}
+
+#services > span{
+    padding-right: 0.3rem;
 }
 
 
@@ -229,6 +233,20 @@ a{
 
 #bottomNavItems > .icons > a:hover{
     @extend %lightFadeHover;
+}
+
+
+// Chevron up and down for services
+.arrow{
+    width: 0.3rem;
+    height: 0.3rem;
+    border: 0.2rem solid;
+    border-color: transparent rgb(166, 165, 165) rgb(166, 165, 165) transparent;
+    transform: rotate(225deg);
+}
+
+#arrowDown{
+    border-color: rgb(166, 165, 165) transparent transparent rgb(166, 165, 165);
 }
 
 @keyframes fade {

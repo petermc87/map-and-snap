@@ -1,35 +1,34 @@
 import styles from '../Services/Services.module.scss'
 
 export default function Service ({ realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, setOpenModal, setCurrentPortfolio }) {
-  
   const realEstatePortfolio = [
     [
       {
         name: 'Irving Place',
         hero: 'https://i.imgur.com/L9Ie0J8.png',
         description: 'We were assigned to turn a blank living space into a fully furnished apartment using virtual staging',
-        otherImages: ['https://i.imgur.com/UdBEVxQ.png','https://i.imgur.com/gx3bLHW.png',"https://i.imgur.com/gR4kzcH.png",'https://i.imgur.com/VJEWVOy.png', 'https://i.imgur.com/Q3Vf05i.png', 'https://i.imgur.com/hPTrHMx.png', 'https://i.imgur.com/xKFMs02.png']
+        otherImages: ['https://i.imgur.com/UdBEVxQ.png', 'https://i.imgur.com/gx3bLHW.png', 'https://i.imgur.com/gR4kzcH.png', 'https://i.imgur.com/VJEWVOy.png', 'https://i.imgur.com/Q3Vf05i.png', 'https://i.imgur.com/hPTrHMx.png', 'https://i.imgur.com/xKFMs02.png']
       },
-  
+
       {
         name: 'Eagle Crest',
         hero: 'https://i.imgur.com/b0Fon7S.jpg',
         description: 'Aerial photographs for a new plot on Eagle Crest resort in Redmond, Oregon.',
-        otherImages: ['https://i.imgur.com/7jJ2xtg.jpg', 'https://i.imgur.com/evtccPv.jpg', 'https://i.imgur.com/Trujd9x.jpg','https://i.imgur.com/Kr08su6.jpg']
+        otherImages: ['https://i.imgur.com/7jJ2xtg.jpg', 'https://i.imgur.com/evtccPv.jpg', 'https://i.imgur.com/Trujd9x.jpg', 'https://i.imgur.com/Kr08su6.jpg']
       },
-  
+
       {
         name: 'Beal Na Blath',
         hero: 'https://i.imgur.com/3E2JK9C.jpg',
         description: 'Aerial and regular photography of a small cottage in rural Ireland.',
-        otherImages: ['https://i.imgur.com/XHFQ1vu.jpg', 'https://i.imgur.com/Q7VYyio.jpg', 'https://i.imgur.com/4AGIadS.jpg','https://i.imgur.com/75QIRCp.jpg', 'https://i.imgur.com/MYy301H.jpg','https://i.imgur.com/vrpNsYf.jpg', 'https://i.imgur.com/LHHZmhE.jpg', 'https://i.imgur.com/KaJoPtO.jpg', 'https://i.imgur.com/ik0ZrgO.jpg', 'https://i.imgur.com/g3jeBV6.jpg','https://i.imgur.com/VMF8zzp.jpg','https://i.imgur.com/b7fSmO6.jpg']
+        otherImages: ['https://i.imgur.com/XHFQ1vu.jpg', 'https://i.imgur.com/Q7VYyio.jpg', 'https://i.imgur.com/4AGIadS.jpg', 'https://i.imgur.com/75QIRCp.jpg', 'https://i.imgur.com/MYy301H.jpg', 'https://i.imgur.com/vrpNsYf.jpg', 'https://i.imgur.com/LHHZmhE.jpg', 'https://i.imgur.com/KaJoPtO.jpg', 'https://i.imgur.com/ik0ZrgO.jpg', 'https://i.imgur.com/g3jeBV6.jpg', 'https://i.imgur.com/VMF8zzp.jpg', 'https://i.imgur.com/b7fSmO6.jpg']
       },
 
       {
         name: 'Jamaica, Queens',
         hero: 'https://i.imgur.com/SkL4586.jpg',
         description: 'Regular photography for a 2 family home in Jamaica, Queens.',
-        otherImages: ['https://i.imgur.com/FaoRDSB.jpg', 'https://i.imgur.com/xR6Y4op.jpg', 'https://i.imgur.com/Ps6LwTB.jpg', 'https://i.imgur.com/LGjtL1T.jpg','https://i.imgur.com/xGcSTIp.jpg', 'https://i.imgur.com/8alv6PZ.jpg', 'https://i.imgur.com/AJ2kfTy.jpg', 'https://i.imgur.com/fndt30m.jpg', 'https://i.imgur.com/jQFTSYD.jpg', 'https://i.imgur.com/OTBAlDV.jpg', 'https://i.imgur.com/PzN7nQN.jpg', 'https://i.imgur.com/pJ9igvw.jpg', 'https://i.imgur.com/CrPgSQn.jpg']
+        otherImages: ['https://i.imgur.com/FaoRDSB.jpg', 'https://i.imgur.com/xR6Y4op.jpg', 'https://i.imgur.com/Ps6LwTB.jpg', 'https://i.imgur.com/LGjtL1T.jpg', 'https://i.imgur.com/xGcSTIp.jpg', 'https://i.imgur.com/8alv6PZ.jpg', 'https://i.imgur.com/AJ2kfTy.jpg', 'https://i.imgur.com/fndt30m.jpg', 'https://i.imgur.com/jQFTSYD.jpg', 'https://i.imgur.com/OTBAlDV.jpg', 'https://i.imgur.com/PzN7nQN.jpg', 'https://i.imgur.com/pJ9igvw.jpg', 'https://i.imgur.com/CrPgSQn.jpg']
       }
     ],
     {
@@ -58,7 +57,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
       serviceBreakdown: '3-D Photogrammetry surveying using Post Processing Kinematics (PPK) technology. Up to 1/2inch accurate surveying available soon.'
     }
   ]
-  
+
   return (
     <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
@@ -83,10 +82,13 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
           <div className={styles.textContainer} id={styles.mapTextContainer}>
             <h1 id={styles.mapHeading}>DRONE MAPPING SERVICES</h1>
             <p id={styles.mapParagraph}>3-D and 2-D Mapping for Construction, Agricultural or private.</p>
-            <div className={styles.button} onClick={() => { 
-              setOpenModal(true) 
-              setCurrentPortfolio(mappingPortfolio)
-              }}>Learn More</div>
+            <div
+              className={styles.button} onClick={() => {
+                setOpenModal(true)
+                setCurrentPortfolio(mappingPortfolio)
+              }}
+            >Learn More
+            </div>
           </div>
         </div>
         <div className={styles.image} id={styles.mapImage} />

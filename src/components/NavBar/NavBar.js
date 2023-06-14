@@ -71,7 +71,8 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
             </div>
             {expandServices
               ? <>
-                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}>Services <div>&#8963;</div></div>
+              {/* Up arrow */}
+                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}><span>Services</span><div className={styles.arrow}></div></div>
                 <div className={styles.servicesContainer}>
                   <div
                     className={styles.navItem} onClick={() => {
@@ -111,7 +112,8 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                 </div>
               </>
               : <>
-                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}>Services <div>&#8964;</div></div>
+              {/* down arrow */}
+                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}><span>Services </span><div className={styles.arrow} id={styles.arrowDown}></div></div>
                 </>}
             <div className={styles.navItem}>About</div>
             <div
