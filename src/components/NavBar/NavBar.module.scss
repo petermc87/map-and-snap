@@ -24,6 +24,7 @@
 
 .navLink{
     font-size: 1rem;
+
 }
 
 .navLink:hover{
@@ -44,7 +45,10 @@
     z-index: +1;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-
+    align-items: center;
+}
+#servicesNavBar > span{
+    padding-right: 0.3rem;
 }
 
 .servicesDropDown{

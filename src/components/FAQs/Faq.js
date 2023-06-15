@@ -19,7 +19,7 @@ export default function Faq ({ faq, question }) {
               setTextReveal(false)
             }}
           >
-            &#8963;
+            <div className={styles.chevron}></div>
           </div>
         </>
         :
@@ -28,7 +28,7 @@ export default function Faq ({ faq, question }) {
           className={styles.arrow} onClick={() => {
             setTextReveal(true)
           }}
-        >&#8964;
+        ><div className={styles.chevron} id={styles.downArrow}></div>
         </div>}
     </div>
   )

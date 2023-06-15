@@ -16,6 +16,7 @@ $solid: none;
 .arrow{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 0.5rem;
     font-size: 3rem;
     border: $solid purple;
@@ -25,7 +26,6 @@ $solid: none;
     height: 50%;
     border-radius: 0 0 1rem 1rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 0.1%,rgb(235, 235, 235) 10%);
-
 }
 
 .arrow:hover{
@@ -36,6 +36,17 @@ $solid: none;
     animation: slide-down ease-in 0.2s forwards;
 }
 
+.chevron{
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 0.3rem solid;
+    border-color: transparent rgb(0, 0, 0) rgb(0, 0, 0) transparent;
+    transform: rotate(225deg);
+}
+
+#downArrow{
+    border-color:rgb(0, 0, 0)  transparent  transparent  rgb(0, 0, 0) ;
+}
 
 @media only screen and (max-width: 500px) {
     .body{
