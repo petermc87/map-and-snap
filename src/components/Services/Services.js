@@ -58,6 +58,27 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
     }
   ]
 
+  const videographyPortfolio = [
+    [
+      {
+        name: 'Oregon and California Coastline',
+        hero: "olEnMes6uAo",
+        description: 'Highlights from a trip along the south Oregon and northern Californian coastline.',
+        // otherImages: null
+      },
+      {
+        name: 'Maine Coastline Compilation Video',
+        hero: 'kzO-b-8mSlA',
+        description: 'A collection of video clips of the Maine coastline.',
+        // otherImages: null,
+      },
+    ],
+    {
+      title: 'Videography Services',
+      serviceBreakdown: 'Our professional videography service combines aerial and ground-based techniques to capture stunning visuals that bring your story to life.'
+    }
+  ]
+
   return (
     <div className={styles.servicesWrapper} ref={realEstateRef}>
       <div className={styles.serviceContainer}>
@@ -102,7 +123,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
             <div className={styles.textContainer} id={styles.roofTextContainer}>
               <h1 id={styles.roofHeading}>ROOF INSPECTION & APPRAISALS</h1>
               <p id={styles.roofParagraph}>For clear and concise aerial imagery to assist your work, we have you covered.</p>
-              <div className={styles.button} onClick={() => { setOpenModal(true) }}>Learn More</div>
+              <div className={styles.button} >Coming Soon...</div>
             </div>
           </div>
         </div>
@@ -111,7 +132,7 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
             <div className={styles.textContainer} id={styles.roofTextContainer}>
               <h1 id={styles.roofHeading}>CONSTRUCTION </h1>
               <p id={styles.roofParagraph}>Construction progress, surveying or planning</p>
-              <div className={styles.button} onClick={() => { setOpenModal(true) }}>Learn More</div>
+              <div className={styles.button} >Coming Soon...</div>
             </div>
           </div>
           <div className={styles.image} id={styles.constructionImage} />
@@ -123,7 +144,10 @@ export default function Service ({ realEstateRef, mapRef, roofInspectionRef, con
       <div className={styles.textContainer} id={styles.videoTextContainer}>
         <h1 id={styles.roofHeading}>VIDEOGRAPHY </h1>
         <p id={styles.roofParagraph}>Video footage up to 4K in resolution, raw or edited.</p>
-        <div className={styles.button} onClick={() => { setOpenModal(true) }}>Learn More</div>
+        <div className={styles.button} onClick={() => { 
+          setOpenModal(true) 
+          setCurrentPortfolio(videographyPortfolio)
+          }}>Learn More</div>
       </div>
     </div>
 
