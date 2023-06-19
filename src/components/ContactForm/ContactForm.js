@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import React from 'react'
 import emailjs from '@emailjs/browser'
 import styles from '../ContactForm/ContactForm.module.scss'
 

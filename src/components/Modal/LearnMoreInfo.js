@@ -2,15 +2,10 @@ import { React, useState } from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import styles from '../Modal/LearnMoreInfo.module.scss'
-import PropTypes from 'prop-types'
 
 export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob }) {
   // Setting the job to be viewed.
   const [viewingJob, setViewingJob] = useState(null)
-
-  // console.log(currentPortfolio[0][0].otherImages.length)
-  // console.log(currentJob)
-  console.log(currentPortfolio[0])
 
   return (
     <CarouselProvider
@@ -85,7 +80,6 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                       width='700'
                       height='500'
                       src={`https://www.youtube.com/embed/${video.hero}`}
-                      frameBorder="0"
                       allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       allowFullScreen
                       title="Videography"

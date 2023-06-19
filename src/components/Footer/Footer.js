@@ -1,8 +1,10 @@
 import styles from '../Footer/Footer.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClick }) {
+  const navigate = useNavigate()
   return (
     <footer>
       <div className={styles.navigation}>
@@ -14,7 +16,8 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
           </div>
           <div className={styles.middleNav}>
             <li onClick={() => { refHandleClick(faqRef) }}>FAQs</li>
-            <li>Privacy Policy</li>
+            <li onClick={() => { navigate('/policy')}}>Privacy Policy</li>
+            {/* <li onClick={navigate('/policy')}>Privacy Policy</li> */}
           </div>
           <div className={styles.bottomNav}>
             <li>&#9400; Drone Map & Snap 2023</li>

@@ -22,7 +22,10 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
   return (
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
-        <div className={styles.navLink} id={styles.navLogo} onClick={() => { refHandleClick(homeRef) }}><img alt='logo' src='https://i.imgur.com/5vMPxIK.png'/></div>
+        <div className={styles.navLink} id={styles.navLogo} onClick={() => { 
+          navigate('/')
+          refHandleClick(homeRef) 
+           }}><img alt='logo' src='https://i.imgur.com/5vMPxIK.png'/></div>
 
         <div className={styles.rightNavContainer}>
           {servicesDropDown
