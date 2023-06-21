@@ -36,12 +36,11 @@ function App () {
 
           </Routes>
         </>
-        : 
-        <>
-        <Routes>
-          <Route path='/' element={<LandingPage setUser={setUser} />} />
-          <Route path='/policy' element={<PrivacyPolicy />} />
-        </Routes>
+        : <>
+          <Routes>
+            <Route path='/' element={<LandingPage setUser={setUser} />} />
+            <Route path='/policy' element={<PrivacyPolicy />} />
+          </Routes>
         </>}
     </main>
   )

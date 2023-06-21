@@ -1,0 +1,36 @@
+.aboutContainer{
+    // border: solid brown;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    flex-direction: row;
+    margin-bottom: 30rem;
+}
+
+.paragraphContainer{
+    // border: solid red;
+    font-size: 2.5rem;
+    padding: 2.5rem;
+    max-width: 90rem;
+}
+
+.aboutContainer > p{
+    border: solid black;
+}
+
+span{
+    font-weight: bolder;
+}
+
+@media only screen and (max-width:900px) {
+    .imageContainer > img{
+        width: 21rem;
+        height: 19rem
+    }
+    .paragraphContainer{
+        font-size: 2rem;
+    }
+    
+}

@@ -22,15 +22,18 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
   return (
     <>
       <nav className={styles.navContainer} onMouseOut={() => setServicesDropDown(false)}>
-        <div className={styles.navLink} id={styles.navLogo} onClick={() => { 
-          navigate('/')
-          refHandleClick(homeRef) 
-           }}><img alt='logo' src='https://i.imgur.com/5vMPxIK.png'/></div>
+        <div
+          className={styles.navLink} id={styles.navLogo} onClick={() => {
+            navigate('/')
+            refHandleClick(homeRef)
+          }}
+        ><img alt='logo' src='https://i.imgur.com/5vMPxIK.png' />
+        </div>
 
         <div className={styles.rightNavContainer}>
           {servicesDropDown
             ? <>
-              <div className={styles.navLink} id={styles.servicesNavBar}><span>Services</span><div className={styles.arrow}></div></div>
+              <div className={styles.navLink} id={styles.servicesNavBar}><span>Services</span><div className={styles.arrow} /></div>
               <div className={styles.servicesDropDown} onMouseOut={() => setServicesDropDown(false)}>
                 <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(realEstateRef) }}>Real Estate</div>
                 <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(mapRef) }}>Mapping</div>
@@ -39,7 +42,7 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                 <div className={styles.navLink} id={styles.dropDownLink} onMouseOver={() => setServicesDropDown(true)} onClick={() => { refHandleClick(videoRef) }}>Videography</div>
               </div>
             </>
-            : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}><span>Services</span> <div className={styles.arrow} id={styles.arrowDown}></div></div>}
+            : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}><span>Services</span> <div className={styles.arrow} id={styles.arrowDown} /></div>}
           <div className={styles.navLink}>About</div>
           <div className={styles.navLink} onClick={() => { setContactForm(true) }}>Contact</div>
 
@@ -73,8 +76,8 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
             </div>
             {expandServices
               ? <>
-              {/* Up arrow */}
-                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}><span>Services</span><div className={styles.arrow}></div></div>
+                {/* Up arrow */}
+                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(false)}><span>Services</span><div className={styles.arrow} /></div>
                 <div className={styles.servicesContainer}>
                   <div
                     className={styles.navItem} onClick={() => {
@@ -114,8 +117,8 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                 </div>
               </>
               : <>
-              {/* down arrow */}
-                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}><span>Services </span><div className={styles.arrow} id={styles.arrowDown}></div></div>
+                {/* down arrow */}
+                <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}><span>Services </span><div className={styles.arrow} id={styles.arrowDown} /></div>
                 </>}
             <div className={styles.navItem}>About</div>
             <div

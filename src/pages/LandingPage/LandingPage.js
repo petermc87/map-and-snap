@@ -11,6 +11,7 @@ import Footer from '../../components/Footer/Footer'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import ModalContainer from '../../components/Modal/ModalContainer'
 import ModalContainerJob from '../../components/Modal/ModalContainer'
+import About from '../../components/About/About'
 
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
 import { useState, useRef } from 'react'
@@ -112,6 +113,7 @@ export default function AuthPage (props) {
         />
         <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
+        <About />
         <Footer
           setContactForm={setContactForm}
           homeRef={homeRef}

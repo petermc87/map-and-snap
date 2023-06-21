@@ -25,8 +25,8 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
       <Slider>
 
         {/* Indexing the portfolio jobs per service and returning the hero image in the slide. NOTE:
-        it will also distinguish between image based render and video by checking if each job has a 
-        set of images. If its image based, then there will!*/}
+        it will also distinguish between image based render and video by checking if each job has a
+        set of images. If its image based, then there will! */}
         {!viewingJob && currentPortfolio[0][0].otherImages
           ? currentPortfolio[0].map((job, i) => {
             // console.log(job.hero)
@@ -59,37 +59,33 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
 
           :
         // Mapping the images per job
-          viewingJob && currentPortfolio[0][0].otherImages ?
-          viewingJob.otherImages.map((image, i) => {
-            return (
-              <Slide index={i}>
-                <div className={styles.closeButton} onClick={() => { setViewingJob(null) }}>&#128939;</div>
-                <div className={styles.imageContainer}>
-                  <img className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
-                </div>
-              </Slide>
-            )
-          })
-          :
-
-            currentPortfolio[0].map((video, i) => {
-              return(
+          viewingJob && currentPortfolio[0][0].otherImages
+            ? viewingJob.otherImages.map((image, i) => {
+              return (
+                <Slide index={i}>
+                  <div className={styles.closeButton} onClick={() => { setViewingJob(null) }}>&#128939;</div>
+                  <div className={styles.imageContainer}>
+                    <img className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
+                  </div>
+                </Slide>
+              )
+            })
+            : currentPortfolio[0].map((video, i) => {
+              return (
                 <Slide index={i}>
                   <div className={styles.imageContainer}>
-                    <iframe 
+                    <iframe
                       width='700'
                       height='500'
                       src={`https://www.youtube.com/embed/${video.hero}`}
                       allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       allowFullScreen
-                      title="Videography"
+                      title='Videography'
                     />
                   </div>
                 </Slide>
               )
-            })
-          
-          }
+            })}
 
       </Slider>
       <div className={styles.buttonWrapper}>
