@@ -34,6 +34,9 @@ export default function AuthPage (props) {
   const homeRef = useRef(null)
   const faqRef = useRef(null)
 
+  //About section instance
+  const aboutRef = useRef(null)
+
   // DOM reference handleClick event.
   const refHandleClick = (reference) => {
     reference.current?.scrollIntoView({ behavior: 'smooth' })
@@ -68,6 +71,7 @@ export default function AuthPage (props) {
           videoRef={videoRef}
           constructionRef={constructionRef}
           homeRef={homeRef}
+          aboutRef={aboutRef}
         />
       </header>
       <main>
@@ -113,11 +117,15 @@ export default function AuthPage (props) {
         />
         <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
-        <About />
+        <About 
+          setContactForm={setContactForm}
+          aboutRef={aboutRef}
+        />
         <Footer
           setContactForm={setContactForm}
           homeRef={homeRef}
           faqRef={faqRef}
+          aboutRef={aboutRef}
           refHandleClick={refHandleClick}
         />
       </main>

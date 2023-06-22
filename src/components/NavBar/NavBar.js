@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default function NavBar ({ setContactForm, refHandleClick, realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, homeRef }) {
+export default function NavBar ({ setContactForm, refHandleClick, realEstateRef, mapRef, roofInspectionRef, constructionRef, videoRef, homeRef, aboutRef }) {
   // Setting the hamburger to open when the icon is click.
   // The initiliazer is only activated when the icon is
   // click and not any other time (i.e. when the page loads).
@@ -43,7 +43,7 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
               </div>
             </>
             : <div className={styles.navLink} id={styles.servicesNavBar} onMouseOver={() => setServicesDropDown(true)}><span>Services</span> <div className={styles.arrow} id={styles.arrowDown} /></div>}
-          <div className={styles.navLink}>About</div>
+          <div className={styles.navLink} onClick={() => { refHandleClick(aboutRef) }}>About</div>
           <div className={styles.navLink} onClick={() => { setContactForm(true) }}>Contact</div>
 
         </div>
@@ -120,7 +120,10 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                 {/* down arrow */}
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}><span>Services </span><div className={styles.arrow} id={styles.arrowDown} /></div>
                 </>}
-            <div className={styles.navItem}>About</div>
+            <div className={styles.navItem} onClick={() => {
+              setOpenHamburger(false)
+              refHandleClick(aboutRef)
+            }}>About</div>
             <div
               className={styles.navItem} onClick={() => {
                 setContactForm(true)
@@ -194,7 +197,7 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                   : <>
                     <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}>Services <div>&#8964;</div></div>
                   </>}
-                <div className={styles.navItem}>About</div>
+                <div className={styles.navItem} onClick={() => {refHandleClick(aboutRef)}}>About</div>
                 <div className={styles.navItem}>Login</div>
               </div>
               <div className={styles.navItem} id={styles.bottomNavItems}>

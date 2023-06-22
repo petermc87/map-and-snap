@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
-export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClick }) {
+export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClick, aboutRef }) {
   const navigate = useNavigate()
   return (
     <footer>
@@ -12,12 +12,11 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
           <div className={styles.topNav}>
             <li onClick={() => { refHandleClick(homeRef) }}>Home</li>
             <li onClick={() => { setContactForm(true) }}>Contact</li>
-            <li>About</li>
+            <li onClick={() => { refHandleClick(aboutRef)}}>About</li>
           </div>
           <div className={styles.middleNav}>
             <li onClick={() => { refHandleClick(faqRef) }}>FAQs</li>
             <li onClick={() => { navigate('/policy') }}>Privacy Policy</li>
-            {/* <li onClick={navigate('/policy')}>Privacy Policy</li> */}
           </div>
           <div className={styles.bottomNav}>
             <li>&#9400; Drone Map & Snap 2023</li>
