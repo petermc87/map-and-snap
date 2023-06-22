@@ -32,7 +32,6 @@
     "react-slideshow-image": "^4.2.1",
     "sass": "^1.57.0",
     "serve-favicon": "^2.5.0",
-    "typescript": "^5.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
