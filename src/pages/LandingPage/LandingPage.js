@@ -34,7 +34,7 @@ export default function AuthPage (props) {
   const homeRef = useRef(null)
   const faqRef = useRef(null)
 
-  //About section instance
+  // About section instance
   const aboutRef = useRef(null)
 
   // DOM reference handleClick event.
@@ -117,7 +117,7 @@ export default function AuthPage (props) {
         />
         <h1 ref={faqRef}>FAQ's</h1>
         <Faqs />
-        <About 
+        <About
           setContactForm={setContactForm}
           aboutRef={aboutRef}
         />

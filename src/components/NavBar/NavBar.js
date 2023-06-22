@@ -120,10 +120,13 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                 {/* down arrow */}
                 <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}><span>Services </span><div className={styles.arrow} id={styles.arrowDown} /></div>
                 </>}
-            <div className={styles.navItem} onClick={() => {
-              setOpenHamburger(false)
-              refHandleClick(aboutRef)
-            }}>About</div>
+            <div
+              className={styles.navItem} onClick={() => {
+                setOpenHamburger(false)
+                refHandleClick(aboutRef)
+              }}
+            >About
+            </div>
             <div
               className={styles.navItem} onClick={() => {
                 setContactForm(true)
@@ -197,7 +200,7 @@ export default function NavBar ({ setContactForm, refHandleClick, realEstateRef,
                   : <>
                     <div className={styles.navItem} id={styles.services} onClick={() => setExpandServices(true)}>Services <div>&#8964;</div></div>
                   </>}
-                <div className={styles.navItem} onClick={() => {refHandleClick(aboutRef)}}>About</div>
+                <div className={styles.navItem} onClick={() => { refHandleClick(aboutRef) }}>About</div>
                 <div className={styles.navItem}>Login</div>
               </div>
               <div className={styles.navItem} id={styles.bottomNavItems}>
