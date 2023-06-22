@@ -1,5 +1,4 @@
 import styles from './IntroSection.module.scss'
-import ContactForm from '../ContactForm/ContactForm'
 
 export default function IntroSection ({ homeRef, refHandleClick, realEstateRef }) {
   return (
