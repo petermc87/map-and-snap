@@ -15,7 +15,7 @@ function App () {
       <Helmet>
         <meta charSet='utf-8'></meta>
         <title>Drone Map & Snap</title>
-        <link rel='canonical' href='http://mysite.com/example'></link>
+        <link rel='canonical' href='https://main--dronemapandsnap.netlify.app/'></link>
         <meta name='description' content='Drone Services Website'></meta>
       </Helmet>
       {user
