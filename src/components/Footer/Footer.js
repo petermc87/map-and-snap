@@ -28,7 +28,7 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
           <div className={styles.socialLinks}>
             <h4>Check Out Our Socials:</h4>
             <div className={styles.topIconWrapper}>
-              <a><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></a>
+              <a href='https://www.instagram.com/dronemapsnap/'><FontAwesomeIcon icon={faLinkedinIn} className='fa-solid fa-linkedin fa-2x' /></a>
               <a href='https://www.instagram.com/dronemapsnap/'><FontAwesomeIcon icon={faInstagram} className='fa-solid fa-instagram fa-2x' /></a>
             </div>
             <div className={styles.bottomIconWrapper}>

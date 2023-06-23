@@ -37,6 +37,7 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                   {/* When you hover over an image, it will set that current job in state so that it can be viewed
                   by the client. */}
                   <img
+                    alt='service'
                     className={styles.image} style={{ backgroundImage: `url(${job.hero})` }}
                     onMouseOver={() => { setCurrentJob(job) }}
                     onMouseOut={() => { setCurrentJob(null) }}
@@ -65,7 +66,7 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                 <Slide index={i}>
                   <div className={styles.closeButton} onClick={() => { setViewingJob(null) }}>&#128939;</div>
                   <div className={styles.imageContainer}>
-                    <img className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
+                    <img alt='service' className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
                   </div>
                 </Slide>
               )

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import LandingPage from '../LandingPage/LandingPage'
 import NewOrderPage from '../NewOrderPage/NewOrderPage'
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
@@ -8,25 +8,9 @@ import NavBar from '../../components/NavBar/NavBar'
 import styles from './App.module.scss'
 
 function App () {
-  const [state, setState] = useState(null)
   const [user, setUser] = useState(null)
-
-  const fetchState = async () => {
-    try {
-      const response = await fetch('/api/test')
-      const data = await response.json()
-      setState(data)
-    } catch (error) {
-      console.error(error)
-    }
-  }
-
-  useEffect(() => {
-    fetchState()
-  }, [])
-
   return (
-    <main className='App'>
+    <main className={styles.App}>
       {user
         ? <>
           <NavBar />

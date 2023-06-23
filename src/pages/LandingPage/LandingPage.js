@@ -1,6 +1,6 @@
 // AuthPage.js
-import SignUpForm from '../../components/SignUpForm/SignUpForm'
-import LoginForm from '../../components/LoginForm/LoginForm'
+// import SignUpForm from '../../components/SignUpForm/SignUpForm'
+// import LoginForm from '../../components/LoginForm/LoginForm'
 import NavBar from '../../components/NavBar/NavBar'
 import Services from '../../components/Services/Services'
 import IntroSection from '../../components/IntroSection/IntroSection'
@@ -10,7 +10,6 @@ import Faqs from '../../components/FAQs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import ModalContainer from '../../components/Modal/ModalContainer'
-import ModalContainerJob from '../../components/Modal/ModalContainer'
 import About from '../../components/About/About'
 
 import { faMapLocation, faDriversLicense, faPeopleGroup, faBusinessTime } from '@fortawesome/free-solid-svg-icons'
