@@ -1,4 +1,9 @@
 .privacyBody{
-    top: 10rem;
     padding: 8rem;
+}
+
+@media only screen and (max-width:1000px) {
+    .privacyBody{
+      padding: 6rem 3rem 3rem 3rem;
+    }
 }
