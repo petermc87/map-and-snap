@@ -10,7 +10,7 @@ export default function ModalContainer ({ openModal, setOpenModal, currentPortfo
                     <div className={styles.modalWrapper}>
                       <div className={styles.heading}>
                         <h1>{currentPortfolio[1].title}</h1>
-                        <div className={styles.closeButton} onClick={() => { setOpenModal(false) }}>&#128939;</div>
+                        <div className={styles.closeButton} onClick={() => { setOpenModal(false) }}>&#10005;</div>
                       </div>
                       <div className={styles.infoContainer}>
                         <LearnMoreInfo
