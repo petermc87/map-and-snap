@@ -28,7 +28,7 @@ export default function ContactForm ({ contactForm, setContactForm }) {
                       setContactForm(false)
                       setMessageSent(false)
                     }}
-                  >&#128939;
+                  >&#10005;
                   </div>
                   <div className={styles.titleText}>
                     {messageSent
