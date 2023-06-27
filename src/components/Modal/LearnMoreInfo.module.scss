@@ -62,16 +62,15 @@
 
 
 #nextButton, #backButton{
-    position: relative;
+    // position: relative;
     display: flex;
-    width: 3rem;
     border-radius: 0.2rem;
-    padding: 0.4rem 0.5rem 0 0.5rem;
-    font-size: 1.5rem;
+    // padding: 0.2rem;
+    font-size: 2.5rem;
     justify-content: center;
     border: none;
     margin: 0.5rem;
-
+    align-items: center;
     background-color: gray;
 }
 
@@ -80,7 +79,6 @@
 }
 
 .buttonWrapper{
-    // border: solid black;
     justify-content: center;
     display: flex;
     position: relative;

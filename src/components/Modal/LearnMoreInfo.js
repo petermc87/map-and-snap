@@ -90,8 +90,8 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
 
       </Slider>
       <div className={styles.buttonWrapper}>
-        <ButtonBack id={styles.backButton}>&#x21E6;</ButtonBack>
-        <ButtonNext id={styles.nextButton}>&#x21E8;</ButtonNext>
+        <ButtonBack id={styles.backButton}>&#x21FD;</ButtonBack>
+        <ButtonNext id={styles.nextButton}>&#x21FE;</ButtonNext>
       </div>
     </CarouselProvider>
   )
