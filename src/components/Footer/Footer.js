@@ -9,7 +9,7 @@ export default function Footer ({ setContactForm, homeRef, faqRef, refHandleClic
     <footer>
       <div className={styles.navigation}>
         <ul className={styles.leftList}>
-        <li><img id={styles.footerLogo} src='https://i.imgur.com/JETteeg.png' alt='footerlogo'/></li>
+          <li><img id={styles.footerLogo} src='https://i.imgur.com/JETteeg.png' alt='footerlogo' /></li>
           <div className={styles.topNav}>
             <li onClick={() => { refHandleClick(homeRef) }}>Home</li>
             <li onClick={() => { setContactForm(true) }}>Contact</li>

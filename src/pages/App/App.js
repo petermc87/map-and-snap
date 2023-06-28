@@ -13,10 +13,10 @@ function App () {
   return (
     <main className={styles.App}>
       <Helmet>
-        <meta charSet='utf-8'></meta>
+        <meta charSet='utf-8' />
         <title>Drone Map & Snap</title>
-        <link rel='canonical' href='https://main--dronemapandsnap.netlify.app/'></link>
-        <meta name='description' content='Drone Services Website'></meta>
+        <link rel='canonical' href='https://main--dronemapandsnap.netlify.app/' />
+        <meta name='description' content='Drone Services Website' />
       </Helmet>
       {user
         ? <>

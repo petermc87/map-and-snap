@@ -3,7 +3,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import styles from '../Modal/LearnMoreInfo.module.scss'
 
-export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurrentJob }) {
+export default function LearnMoreInfo ({ currentPortfolio }) {
   // Setting the job to be viewed.
   const [viewingJob, setViewingJob] = useState(null)
 
@@ -34,30 +34,21 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
 
               <Slide index={i}>
                 <div className={styles.imageContainer}>
-                  {/* When you hover over an image, it will set that current job in state so that it can be viewed
-                  by the client. */}
+                  {/* Job title container will appear over the hero image. */}
                   <img
-                    alt="service"
+                    alt='service'
                     className={styles.image} style={{ backgroundImage: `url(${job.hero})` }}
-                    onMouseOver={() => { setCurrentJob(job) }}
-                    onMouseOut={() => { setCurrentJob(null) }}
                     onClick={() => { setViewingJob(job) }}
                   />
-                  {/* Job name text layered over the image */}
-                  {currentJob
-                    ? <>
-                      <div className={styles.imageOverlayText}>
-                        <h1>{currentJob.name}</h1>
-                        <h2>Click for images</h2>
-                      </div>
-                      </>
-                    : ''}
+                  <div className={styles.imageOverlayText}>
+                    <h1>{job.name}</h1>
+                    <h2>Click for images</h2>
+                  </div>
                 </div>
               </Slide>
 
             )
           })
-
           :
         // Mapping the images per job
           viewingJob && currentPortfolio[0][0].otherImages
@@ -66,7 +57,7 @@ export default function LearnMoreInfo ({ currentPortfolio, currentJob, setCurren
                 <Slide index={i}>
                   <div className={styles.closeButton} onClick={() => { setViewingJob(null) }}>&#10005;</div>
                   <div className={styles.imageContainer}>
-                    <img alt="service" className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
+                    <img alt='service' className={styles.image} style={{ backgroundImage: `url(${image})` }} id={styles.jobImage} />
                   </div>
                 </Slide>
               )

@@ -11,7 +11,7 @@ export default function About ({ setContactForm, aboutRef }) {
           after development of a solid business plan and potential client base,
           Peter founded <span>Drone Map & Snap</span>.
         </div>
-        <div className={styles.imageContainer}><img src='https://i.imgur.com/CVGIiux.png' alt='hero'/></div>
+        <div className={styles.imageContainer}><img src='https://i.imgur.com/CVGIiux.png' alt='hero' /></div>
         <div className={styles.paragraphContainer}>
           Since its inception, <span>Drone Map & Snap</span> has completed a number of <span>photography</span>, <span>videography</span> and <span>mapping</span> projects,
           servicing <span>Real Estate</span> and <span>Construction</span> industries. We commit to provide a service that will satisfy all of your needs.
