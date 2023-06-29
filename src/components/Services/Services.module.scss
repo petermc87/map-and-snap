@@ -202,9 +202,6 @@ $border: none;
     #realestateServiceContainer{
         padding: 2.5rem;
     }
-    #realestateServiceContainer > h1 > span{
-        font-size: 2.5rem;
-    }
 
     //Videography.
     #videoTextContainer{
@@ -225,7 +222,6 @@ $border: none;
     };
     .info{
         width: 50%;
-        // padding: 2rem;
     }
     .image{
         width: 50%;
@@ -256,3 +252,9 @@ $border: none;
     }
 }
 
+//Text size change for real estate.
+@media only screen and (max-width: 500px){
+    #realestateServiceContainer > h1 > span{
+        font-size: 2.5rem;
+    }
+}
